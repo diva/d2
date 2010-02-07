@@ -1,0 +1,82 @@
+*** Instructions for installing and configuring MySQL ***
+***      for diva distribution of OpenSim             ***
+
+1 - Install MySQL and, optionally, MySQLAdmin. See
+    http://dev.mysql.com/downloads/
+    If you are in Linux, MySQL is probably already installed:
+    $ mysql --version
+
+Installing and configuring MySQL can be extremelly easy or extremelly difficult depending on your operating system and your prior knowledge in system administration. Installing MySQL in modern Windows versions is straightforward, and you shouldn't encounter any major issues. Similarly, most modern Linux systems already have MySQL installed; you just need to Google for how to configure it and run the server as demon in your particular version of linux. 
+The difficulties increase for older operating systems which may not run the right version of MySQL (5 or greater is recommended). If you encounter difficulties running MySQL, make sure to use plenty of Google, or ask a sys admin for help. 
+     
+After installation, start MySql server, and start the command line console for the mysql root account.
+  $ mysql -u root -p -h localhost
+If this doesn't work, try su or sudo as root
+  $ sudo mysql
+Next,
+   - create a schema called  opensim:
+         mysql> create database opensim;
+
+   - create a user account called opensim with any passwd you want.
+     Please choose a good password!
+         mysql> create user opensim identified by 'your_password_here';
+     (You may also want to 
+         mysql> create user 'opensim'@'localhost' identified by  
+            'your_password_here';
+     )
+
+   - give all privileges to that user for access to the 
+     opensim schema:
+         mysql> grant all on opensim.* to opensim;
+
+   - make MySql server reload the user data:
+         mysql> FLUSH PRIVILEGES;
+
+
+   NOTE: The 2 middle commands are only available for MySQl 5. If your
+   installation is older, or if they don't work, do this instead:
+     mysql> use mysql;
+     mysql> insert into user (Host, User, Password, Select_priv,
+       Insert_priv,Update_priv,Delete_priv,Create_priv,Drop_priv,
+       Reload_priv,Process_priv,File_priv,References_priv,Index_priv,
+       Alter_priv) VALUES ('localhost','opensim',
+       PASSWORD('your_password_here'),
+       'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y');
+     mysql> FLUSH PRIVILEGES;
+
+
+***********************
+*** TROUBLESHOOTING ***
+***********************
+
+When you run OpenSim later on, you may encounter MySQL-related errors like this:
+
+23:10:13 - ====================================================================
+23:10:13 - STARTING OPENSIM 
+23:10:13 - ====================================================================
+23:10:13 - [OPENSIM MAIN]: Running in sandbox mode
+23:10:13 - [DATASTORE]: Attempting to load OpenSim.Data.MySQL.dll
+23:10:13 - [REGION DB]: MySql - connecting: Data Source=localhost;Database=opensim;User ID=opensim;Password=***;
+23:10:13 - [APPLICATION]:
+APPLICATION EXCEPTION DETECTED: System.UnhandledExceptionEventArgs
+
+Exception: MySql.Data.MySqlClient.MySqlException: Access denied for user 'opensim'@'localhost' (using password: YES)
+  at MySql.Data.MySqlClient.MySqlStream.OpenPacket () [0x00000]
+  at MySql.Data.MySqlClient.NativeDriver.Authenticate411 () [0x00000]
+  at MySql.Data.MySqlClient.NativeDriver.Authenticate () [0x00000]
+  at MySql.Data.MySqlClient.NativeDriver.Open () [0x00000]
+  at MySql.Data.MySqlClient.Driver.Create (MySql.Data.MySqlClient.MySqlConnectionStringBuilder settings) [0x00000]
+  at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection () [0x00000]
+  at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection () [0x00000]
+  at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver () [0x00000]
+
+Errors like this mean that there is something wrong with your MySQL setup. In this particular error, the opensim account @ localhost has not been given access to the MySQL server. This is easy to test:
+
+$ mysql -u opensim -p -h localhost
+
+If you can't login to the server like this, then OpenSim can't do it either. Go back to logging in as root and make sure that the opensim account @ localhost is active:
+
+mysql> use mysql;
+mysql> select Host, User from user;
+
+Create additional opensim accounts @ different variations of the hostname.

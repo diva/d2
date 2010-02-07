@@ -1,0 +1,41 @@
+*** TROUBLESHOOTING ***
+
+1 - For MySQL related errors, see
+    MYSQL.txt, troubleshooting section
+
+2 - In some Linux/Unix systems you may encounter issues running OpenSim
+because of missing packages for running mono. Please look at
+http://opensimulator.org/wiki/Build_Instructions
+While you don't need to *build* this distribution (it's binary) that page may give you some ideas for which mono-related packages are missing.
+
+3 - In some Linux/Unix systems, you may encounter issues related to the Open Dynamics Engine library, ODE.  For example,
+
+-------------------------
+07:58:59 - [PHYSICS]: creating OpenDynamicsEngine
+07:58:59 - [APPLICATION]:
+APPLICATION EXCEPTION DETECTED: System.UnhandledExceptionEventArgs
+
+Exception: System.EntryPointNotFoundException: dInitODE
+  at (wrapper managed-to-native) Ode.NET.d:InitODE ()
+  at OpenSim.Region.Physics.OdePlugin.OdePlugin.GetScene (System.String sceneIdentifier) [0x00000]
+  at OpenSim.Region.Physics.Manager.PhysicsPluginManager.GetPhysicsScene (System.String physEngineName, System.String meshEngineName, IConfigSource config, System.String regionName) [0x00000]
+  at OpenSim.Region.ClientStack.RegionApplicationBase.GetPhysicsScene (System.String engine, System.String meshEngine, IConfigSource config, System.String osSceneIdentifier) [0x00000]
+  at OpenSim.OpenSimBase.GetPhysicsScene (System.String osSceneIdentifier) [0x00000]
+  at OpenSim.OpenSimBase.SetupScene (OpenSim.Framework.RegionInfo regionInfo, Int32 proxyOffset, IConfigSource configSource, IClientNetworkServer& clientServer) [0x00000]
+  at OpenSim.OpenSimBase.CreateRegion (OpenSim.Framework.RegionInfo regionInfo, Boolean portadd_flag, Boolean do_post_init, IScene& mscene) [0x00000]
+  at OpenSim.OpenSimBase.CreateRegion (OpenSim.Framework.RegionInfo regionInfo, Boolean portadd_flag, IScene& scene) [0x00000]
+  at OpenSim.ApplicationPlugins.LoadRegions.LoadRegionsPlugin.PostInitialise () [0x00000]
+  at OpenSim.OpenSimBase.StartupSpecific () [0x00000]
+  at OpenSim.OpenSim.StartupSpecific () [0x00000]
+  at OpenSim.Framework.Servers.BaseOpenSimServer.Startup () [0x00000]
+  at OpenSim.Application.Main (System.String[] args) [0x00000]
+
+Application is terminating: True
+-------------------------
+
+If you encounter ODE issues, it's because the packaged libode.so is not appropriate for your system. In that case, you will have to compile the ODE library from source. At opensimulator.org there are very good instructions on how to do that:
+http://opensimulator.org/wiki/PhysicsEngines
+
+After compiling, don't forget to copy the new library to the bin directory of the diva distribution, something like this:
+  $ cp /usr/local/lib/libode.so /mydir/diva-rxxx/bin
+You will have to do this after updates too.

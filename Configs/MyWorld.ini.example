@@ -1,0 +1,37 @@
+[Startup]
+	; ### Set the password
+    storage_connection_string="Data Source=localhost;Database=opensim;User ID=opensim;Password=***;";
+
+    ; SmartThreadPool is reported to work well on Mono/Linux, but 
+    ; UnsafeQueueUserWorkItem has been benchmarked with better
+    ; performance on .NET/Windows
+    async_call_method = SmartThreadPool
+    ; recommended: false for mono / true for Windows
+    use_async_when_possible = false
+
+[DatabaseService]
+	; ### Set the password (again)
+    ConnectionString = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
+
+
+[StandAlone]
+    ;# Set the password (again!)
+    user_source = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
+
+	; # Change if you want to see a different message upon login
+    welcome_message = "Welcome to Your World"
+    
+    default_location_x = 5000
+    default_location_y = 5000
+
+[Network]
+    http_listener_port = 9000
+	; # If you want to be able to Hypergrid around, you need to have an IP address
+	; # or domain name reacheable from the outside.
+	; # Change these to that IP address or domain name mapped to this machine
+	; # Leave the same port 9000
+    user_server_url = "http://127.0.0.1:9000"
+    asset_server_url = "http://127.0.0.1:9000"
+    inventory_server_url = "http://127.0.0.1:9000"
+    grid_server_url = "http://127.0.0.1:9000"
+

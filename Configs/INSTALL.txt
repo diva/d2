@@ -1,0 +1,72 @@
+*** Diva Distribution of OpenSim ***
+
+The Diva distribution is a binary distribution. As such, it is much simpler to install than the official OpenSim distribution, which is sources-only. If you come across web pages with instructions for installing OpenSim, please keep this in mind -- this distribution does not need anything related to getting and compiling source code (e.g. git, nant, etc).
+
+Follow these steps for installation of this OpenSim distribution.
+ 
+[If Linux/Unix,
+ 0 - Install Mono 2.4.2 or higher. See
+     MONO.txt
+     for important instructions on how to setup mono for
+     OpenSim]
+     
+ 1 - Install MySQL and, optionally, MySQLAdmin. See
+     MYSQL.txt
+     for important instructions on how to setup MySQL for 
+     this distribution
+
+     
+ 2 - Change to bin and run Configure.exe, the application. This will
+     start a console application that will automatically configure your
+     OpenSim.
+     (If in Linux, type 
+      $ mono Configure.exe)
+     Answer the few questions that it asks.
+     If you want to change your answers, run it again.
+
+     
+ 3 - In bin, run OpenSim.exe, the application. This will start a
+     console application.
+     (If in Linux, type 
+      $ mono OpenSim.exe)
+
+     OpenSim has several console commands, you can learn about them in
+     http://opensimulator.org
+
+     For creating a normal user account, type:
+     # create user
+     
+     For flattening the terrain, type:
+     # terrain fill 21
+     
+     For shutting down, type
+     # shutdown
+     
+ That's it for OpenSim! For connecting the client to your world, see
+ http://opensimulator.org/wiki/Connecting
+ The loginuri of your world is:
+ http://your_IP_address:9000
+ 
+
+------------------------------------------------------------------
+UPDATES
+
+To update your world to a newer diva release, simply run the tool
+Update.exe
+
+Then, shutdown OpenSim.exe in the old release and start 
+OpenSim.exe in the new release.
+
+IMPORTANT: Don't run Configure.exe on your updated diva release,
+because that will override your world configuration with a fresh
+configuration, and you will loose your previous regions.
+
+
+------------------------------------------------------------------
+For advanced configuration options, please see
+ADVANCED.txt
+
+------------------------------------------------------------------
+
+For troubleshooting running OpenSim, please see
+TROUBLESHOOTING.txt
