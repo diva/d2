@@ -1,9 +1,8 @@
 #! /usr/bin/sh
 
-#opensimdir=/c/dev/divadistribution-git/opensim
-opensimdir=c:/dev/divadistro/opensim
-toolsdir=C:/dev/miservices-git/miservices/divadistribution/Tools
-libdir=C:/dev/miservices-git/miservices/divadistribution/Library
+opensimdir=./opensim
+toolsdir=./Tools
+libdir=./Library
 wd=`pwd`
 
 # Get the tag
@@ -14,7 +13,7 @@ distdir=diva-r$tag
 
 # Create distribution directory and start filling it
 cd $wd
-echo Making MetaverseInk Diva distribution $distdir
+echo Making Diva Distribution $distdir
 mkdir $distdir
 cp -r $opensimdir/bin $distdir
 cp $opensimdir/README.txt $distdir/OSREADME.txt
