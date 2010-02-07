@@ -1,8 +1,8 @@
 #! /usr/bin/sh
 
-opensimdir=./opensim
-toolsdir=./Tools
-libdir=./Library
+opensimdir=../opensim
+toolsdir=Tools
+libdir=Library
 wd=`pwd`
 
 # Get the tag
