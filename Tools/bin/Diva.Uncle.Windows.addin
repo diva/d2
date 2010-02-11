@@ -1,0 +1,10 @@
+﻿<Addin id="NiniTest" version="1.0" isroot="true">
+  <Runtime>
+    <Import assembly="Diva.Uncle.Windows.exe" />
+    <Import assembly="Diva.Windows.dll" />
+    <Import assembly="Mono.Addins.dll"/>
+  </Runtime>
+  <ExtensionPoint path="/NiniTest/Modules" name="Modules">
+    <ExtensionNode name="Module" type="Mono.Addins.TypeExtensionNode" />
+  </ExtensionPoint>
+</Addin>

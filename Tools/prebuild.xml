@@ -78,6 +78,108 @@
       </Files>
     </Project>
 
+    <!-- Diva.Uncle related projects -->
+    <Project name="Diva.Uncle" path="Uncle/Diva.Uncle" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System"/>
+      <Reference name="Nini.dll"/>
+      <Reference name="Mono.Addins.dll"/>
+
+      <Files>
+        <Match pattern="*.cs" recurse="true">
+          <Exclude pattern="Tests" />
+        </Match>
+      </Files>
+    </Project>
+    <Project name="Diva.Windows" path="Uncle/Diva.Windows" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System"/>
+      <Reference name="System.Drawing"/>
+      <Reference name="System.Windows.Forms"/>
+      <Reference name="Diva.Uncle"/>
+      <Reference name="Nini.dll"/>
+      <Reference name="Mono.Addins.dll"/>
+
+
+      <Files>
+        <Match pattern="*.cs" recurse="true" />
+      </Files>
+    </Project>
+    <Project name="Diva.Uncle.Windows" path="Uncle/Diva.Uncle.Windows" type="WinExe">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System"/>
+      <Reference name="System.Drawing"/>
+      <Reference name="System.Windows.Forms"/>
+      <Reference name="Diva.Uncle"/>
+      <Reference name="Diva.Windows"/>
+      <Reference name="Nini.dll"/>
+      <Reference name="Mono.Addins.dll"/>
+
+      <Files>
+        <Match pattern="*.cs" recurse="true" />
+        <Match pattern="*.resx" recurse="true" />
+      </Files>
+    </Project>
+    <Project name="Diva.Uncle.Windows.StartupTab" path="Uncle/Diva.Uncle.Windows.StartupTab" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System"/>
+      <Reference name="System.Drawing"/>
+      <Reference name="System.Windows.Forms"/>
+      <Reference name="Diva.Uncle"/>
+      <Reference name="Diva.Windows"/>
+      <Reference name="Nini.dll"/>
+      <Reference name="Mono.Addins.dll"/>
+
+      <Files>
+        <Match pattern="*.cs" recurse="true" />
+        <Match pattern="*.resx" recurse="true" />
+      </Files>
+    </Project>
+
   </Solution>
 </Prebuild>
 

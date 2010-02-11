@@ -1,0 +1,11 @@
+﻿<Addin>
+  <Runtime>
+    <Import assembly="Diva.Uncle.Windows.StartupTab.dll" />    
+  </Runtime>
+  <Dependencies>
+    <Addin id="NiniTest" version="1.0"/>
+  </Dependencies>
+  <Extension path="/NiniTest/Modules">
+    <Module type="Diva.Uncle.Windows.StartupTab.StartupTab" />
+  </Extension>
+</Addin>
