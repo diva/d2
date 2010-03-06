@@ -3,6 +3,19 @@
 This diva distro is based on 0.6.9(dev). The exact GIT tag
 is shown on the name of the zip file.
 
+This is a minor release, the last before 0.7.
+
+** Bug fixes in OpenSim since previous version of this distro:
+
+- Fixes Undo
+- Fixes T-pose of others on login
+- Feet stand on the ground instead of in the ground
+- Almost all of LSL implemented
+
+===================== Older release notes ====================
+
+==== r11766 ====
+
 ** Additions 
 
 - There is a new addon module, LibraryModule, that allows sim 
@@ -29,8 +42,6 @@ is shown on the name of the zip file.
 
 - map image is correctly set after hyperlinking
 - multi-HG-TPs preserve the home information
-
-===================== Older release notes ====================
 
 ==== r11651 ====
 

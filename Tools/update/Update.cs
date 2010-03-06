@@ -287,8 +287,24 @@ namespace Update
                 Console.WriteLine("Please read the RELEASENOTES to know what changed.");
                 Console.WriteLine("If you made changes to OpenSim.ini, please copy that file over\n or change the new one.");
                 Console.WriteLine("*********************************************************************");
+
+                try
+                {
+                    string path = Path.Combine(newRelaseDir, "IMPORTANT.txt");
+
+                    using (TextReader tr = new StreamReader(path))
+                    {
+                        string line;
+                        while ((line = tr.ReadLine()) != null)
+                        {
+                            Console.WriteLine(line);
+                        }
+                    }
+                }
+                catch { }
             }
-            Console.WriteLine("<Press return to exit>");
+
+            Console.WriteLine("\n<Press return to exit>");
             Console.ReadLine();
         }
 

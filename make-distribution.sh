@@ -43,6 +43,8 @@ rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventor
 # Unfortunately there's some dependency...
 #rm OpenSim.Region.ScriptEngine.Shared.YieldProlog.dll*
 
+# Unused clients
+
 # Misc
 rm OpenSim.Tools.lslc.*
 
@@ -61,6 +63,7 @@ cp Configs/MONO.txt $distdir
 cp Configs/MI.txt $distdir
 cp Configs/TROUBLESHOOTING.txt $distdir
 cp Configs/RELEASENOTES.txt $distdir
+cp Configs/IMPORTANT.txt $distdir
 cp Configs/OpenSim.ini $distdir/bin
 cp Configs/DivaPreferences* $distdir/bin/config-include
 cp Configs/MyWorld* $distdir/bin/config-include
