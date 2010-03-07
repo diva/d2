@@ -1,7 +1,6 @@
 *** Release Notes ***
 
-This diva distro is based on 0.6.9(dev). The exact GIT tag
-is shown on the name of the zip file.
+This diva distro is based on 0.6.9(dev), a few revisions before 0.6.9. The exact GIT tag is shown on the name of the zip file.
 
 This is a minor release, the last before 0.7.
 
@@ -11,6 +10,7 @@ This is a minor release, the last before 0.7.
 - Fixes T-pose of others on login
 - Feet stand on the ground instead of in the ground
 - Almost all of LSL implemented
+- Fixes prim to prim collision
 
 ===================== Older release notes ====================
 

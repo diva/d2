@@ -44,6 +44,7 @@ rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventor
 #rm OpenSim.Region.ScriptEngine.Shared.YieldProlog.dll*
 
 # Unused clients
+rm *Sirikata* *VWoHTTP*
 
 # Misc
 rm OpenSim.Tools.lslc.*

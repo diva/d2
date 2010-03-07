@@ -77,7 +77,9 @@ namespace Update
             if (readStream != null) readStream.Close();
 
             // This is very fragile.
-            string[] parts = response.Split(new char[] { '@' });
+            // It used to be '@'. I changed it to '!' in 12274, a mandatory stop in the update chain
+            // Older Update versions still get the '@' to 12274
+            string[] parts = response.Split(new char[] { '#' });
             string uri = string.Empty;
             if (parts.Length == 3)
             {
