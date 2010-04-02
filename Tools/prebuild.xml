@@ -78,6 +78,7 @@
       </Files>
     </Project>
 
+    
     <!-- Diva.Uncle related projects -->
     <Project name="Diva.Uncle" path="Uncle/Diva.Uncle" type="Library">
       <Configuration name="Debug">
@@ -102,6 +103,7 @@
         </Match>
       </Files>
     </Project>
+    
     <Project name="Diva.Windows" path="Uncle/Diva.Windows" type="Library">
       <Configuration name="Debug">
         <Options>
