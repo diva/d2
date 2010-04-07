@@ -1,6 +1,6 @@
-First, register hgtp:// moniker by running
+First, install hgtp:// moniker by running
 
-Launcher.exe -register
+Launcher.Setup\setup.exe
 
 This will allow you to launch a second life viewer from a web page with the url
 
