@@ -28,6 +28,7 @@ Next,
    - give all privileges to that user for access to the 
      opensim schema:
          mysql> grant all on opensim.* to opensim;
+         mysql> grant all on opensim.* to 'opensim'@'localhost';
 
    - make MySql server reload the user data:
          mysql> FLUSH PRIVILEGES;
