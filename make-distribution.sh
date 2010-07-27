@@ -1,14 +1,16 @@
 #! /usr/bin/sh
 
-opensimdir=../opensim
+opensimdir=../opensim-diva-origin/diva-distribution
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
 
 # Get the tag
 cd $opensimdir
-tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
-tag=`echo ${tag:53}`
+#tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
+#tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
+#tag=`echo ${tag:53}`
+tag=13352
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
@@ -16,6 +18,7 @@ cd $wd
 echo Making Diva Distribution $distdir
 mkdir $distdir
 cp -r $opensimdir/bin $distdir
+cp -r $opensimdir/WifiPages $distdir
 cp $opensimdir/README.txt $distdir/OSREADME.txt
 cp $opensimdir/CONTRIBUTORS.txt $distdir/OSCONTRIBUTORS.txt
 cp $opensimdir/LICENSE.txt $distdir/OSLICENSE.txt
@@ -25,16 +28,16 @@ cp -r $opensimdir/ThirdPartyLicenses $distdir
 echo Cleaning up
 chmod +rwx $distdir -R
 cd $distdir/bin
+rm Robust* SimpleApp*
+rm OpenSim.TestSuite* Prebuild.exe* OpenSim.Tests.Clients*
+rm SubversionSharp.* svn_client-1.dll 
 rm OpenSim.Grid.*
-rm OpenSim.Server.exe* OpenSim.Services.exe*
-rm OpenSim.TestSuite.exe* Prebuild.exe*
-rm SubversionSharp.dll svn_client-1.dll 
 
 # Unsed DBs
-rm NHibernate.dll libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll sqlite3.dll sqlite-3.4.1.so NHibernate.Mapping.Attributes.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.NHibernate.dll* OpenSim.Data.SQLite.dll*
+rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll*
 
 # Unused Physics
-rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll Physics/OpenSim.Region.Physics.BulletDotNETPlugin.dll Physics/OpenSim.Region.Physics.BulletXPlugin.dll 
+rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
 
 # Unused plugins
 rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventory* OpenSim.ApplicationPlugins.Rest.Regions.dll*
@@ -46,11 +49,14 @@ rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventor
 # Unused clients
 rm *Sirikata* *VWoHTTP*
 
+# Unused Diva components
+rm Diva.Data.MySQL.* Diva.LoginService.* Diva.Wifi.ProcessorTest.*
+
 # Misc
 rm OpenSim.Tools.lslc.*
 
 rm *.pdb *.log *.ini *.jpg *.JPG
-rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.*
+rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.xml config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/*
 
 # Copy config files
@@ -85,8 +91,8 @@ cp $libdir/"Objects Library (small).iar" $distdir/bin/Library
 # Zip it
 echo Zipping...
 chmod +rwx $distdir -R
-#/c/Opt/Cygwin/bin/zip -r $distdir.zip $distdir > out
-zip -r $distdir.zip $distdir > out
+/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
+#zip -r $distdir.zip $distdir > out
 rm out
 
 

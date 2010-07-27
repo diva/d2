@@ -1,3 +1,12 @@
 ###############################################
-#	No other important messages           #
+#	       MANDATORY ACTION               #
+#                                             #
+# For this upgrade to complete, go to the new #
+# installation folder and run                 # 
+#                                             #
+# $ [mono] Configure.exe                      #
+#                                             #
+# See http://metaverseink.com/blog/?p=36      #
+# for further instructions.                   #
+#                                             #
 ###############################################

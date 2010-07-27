@@ -8,9 +8,6 @@ InternalAddress = "0.0.0.0"
 InternalPort = 9000
 AllowAlternatePorts = False
 ExternalHostName = "SYSTEMIP"
-MasterAvatarFirstName = "Master"
-MasterAvatarLastName = "Avatar"
-MasterAvatarSandboxPassword = "***"
 
 [My World 2]
 RegionUUID = "11111111-2222-3333-4444-555555555551"
@@ -19,9 +16,6 @@ InternalAddress = "0.0.0.0"
 InternalPort = 9001
 AllowAlternatePorts = False
 ExternalHostName = "SYSTEMIP"
-MasterAvatarFirstName = "Master"
-MasterAvatarLastName = "Avatar"
-MasterAvatarSandboxPassword = "***"
 
 [My World 3]
 RegionUUID = "11111111-2222-3333-4444-555555555552"
@@ -30,9 +24,6 @@ InternalAddress = "0.0.0.0"
 InternalPort = 9002
 AllowAlternatePorts = False
 ExternalHostName = "SYSTEMIP"
-MasterAvatarFirstName = "Master"
-MasterAvatarLastName = "Avatar"
-MasterAvatarSandboxPassword = "***"
 
 [My World 4]
 RegionUUID = "11111111-2222-3333-4444-555555555553"
@@ -41,7 +32,4 @@ InternalAddress = "0.0.0.0"
 InternalPort = 9003
 AllowAlternatePorts = False
 ExternalHostName = "SYSTEMIP"
-MasterAvatarFirstName = "Master"
-MasterAvatarLastName = "Avatar"
-MasterAvatarSandboxPassword = "***"
 

@@ -1,6 +1,6 @@
 [Startup]
-	; ### Set the password
-    storage_connection_string="Data Source=localhost;Database=opensim;User ID=opensim;Password=***;";
+    ; ### Set the password
+    storage_connection_string="Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
 
     ; SmartThreadPool is reported to work well on Mono/Linux, but 
     ; UnsafeQueueUserWorkItem has been benchmarked with better
@@ -10,28 +10,46 @@
     use_async_when_possible = false
 
 [DatabaseService]
-	; ### Set the password (again)
+    ; ### Set the password (again)
     ConnectionString = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
-
-
-[StandAlone]
-    ;# Set the password (again!)
-    user_source = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
-
-	; # Change if you want to see a different message upon login
-    welcome_message = "Welcome to Your World"
-    
-    default_location_x = 5000
-    default_location_y = 5000
 
 [Network]
     http_listener_port = 9000
-	; # If you want to be able to Hypergrid around, you need to have an IP address
-	; # or domain name reacheable from the outside.
-	; # Change these to that IP address or domain name mapped to this machine
-	; # Leave the same port 9000
-    user_server_url = "http://127.0.0.1:9000"
-    asset_server_url = "http://127.0.0.1:9000"
-    inventory_server_url = "http://127.0.0.1:9000"
-    grid_server_url = "http://127.0.0.1:9000"
 
+[GridService]
+    Region_My_World_1 = "DefaultRegion, FallbackRegion"
+
+[DataSnapshot]
+    gridname = "My World"
+
+[LoginService]
+    WelcomeMessage = "Welcome!"
+
+    HomeURI = "http://127.0.0.1:9000"
+    GatekeeperURI = "http://127.0.0.1:9000"
+    InventoryServerURI = "http://127.0.0.1:9000"
+    AssetServerURI = "http://127.0.0.1:9000"
+
+[GatekeeperService]
+    ExternalName = "http://127.0.0.1:9000"
+
+[WifiService]
+    GridName = "My World"
+    LoginURL = "http://127.0.0.1:9000"
+    WebAddress = "http://127.0.0.1:9000"
+	
+    ;; The Wifi Administrator account, both for Wifi and Inworld "God"
+    AdminFirst = "Wifi"
+    AdminLast = "Admin"
+    AdminEmail = "admin@localhost"
+
+    ;; Do you want to be able to control grid registrations?
+    AccountConfirmationRequired = false
+
+    ;; Variables for your mail server
+    ;; Users will get email notifications from this account.
+    ;; (There is a default account for everyone, but please use yours)
+    SmtpHost = "smtp.gmail.com"
+    SmtpPort = "587"
+    ;SmtpUsername = "your_email@gmail.com"
+    ;SmtpPassword = "your_password_for_that_account"
