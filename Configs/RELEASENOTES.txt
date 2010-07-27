@@ -1,8 +1,46 @@
 *** Release Notes ***
 
-This diva distro is based on 0.6.9(dev), a few revisions before 0.6.9. The exact GIT tag is shown on the name of the zip file.
+This diva distro is based on the official 0.6.9 release. 
+The exact GIT tag is shown on the name of the zip file.
 
-This is a minor release, the last before 0.7.
+This is a major release, with several bug fixes, and the last before 0.7.
+
+There are no changes in the distribution tools, or in the configurations; 
+only bug fixes in OpenSim.
+
+** Bug fixes in OpenSim since previous version of this distro:
+
+* Teleport offers implemented
+* SQLite database adapter updated to work with Mono 2.6 and later (as well as Windows).  Unfortunately, this will currently not work with Mac and Mono 2.6 due to missing symbols in the SQLite library bundled with Mac OS X.  Mono 2.4 can still be used by switching to the legacy adaptor.
+* "Allowed Users" and "Allowed Groups" estate functionality added.
+* Added implementations of llCollisionFilter, llPassCollision, llLoopSoundSlave, llLookSoundMaster, llTriggerSoundLimited, llPointAt, llStopPointAt, llGetCenterOfMass, llGroundRepel, llSetVehicleFlags, llRemoveVehicleFlags, llSetInventoryPermMask.
+* Improvements to LSL functions including llDialog, llGetPrimitiveParams. llSetPrimitiveParams, llGetStatus, llSetStatus, llSetDamage, llDie, llLookAt, llParcelMediaCommandList.
+* Scripts now receive a stream of touch events if the mouse button is held down on their containing prim.
+* Terrain collision implemented.
+* OpenSim.Tools.Configger.exe added to dump configuration as an .ini, .xml or .sql file.
+* Avatar eyes and hair no longer remain white in standalone mode.
+* Improvements to undo, redo, land undo.
+* Improvements to attachments rezzing.
+* Support for HTTP texture fetching.
+* Fix console problem on startup of Grid.UserServer.exe with no existing config.
+* Stop existing avatars appearing in the T-pose to those who have just logged in.
+* Improvements to ground standing.
+* Clothing in the inventory library should now have the correct icons
+* Gestures saved to OARs/IARs
+* OARs now save region settings
+* Fixes for terrain editing problems in megaregions
+* Ground sitting fixed
+* Viewers now receive UUID of the broadcasting prim when chat originates from a script.
+* Attempting to rez no-copy objects on no-rez parcels no longer cause the item to vanish from inventory.
+* Prim to prim collisions improved.
+* Resizing the console window in Mono no longer results in an exception flood.
+* Various performance improvements
+* Various stability improvements
+
+
+===================== Older release notes ====================
+
+==== r12274 ====
 
 ** Bug fixes in OpenSim since previous version of this distro:
 
@@ -11,8 +49,6 @@ This is a minor release, the last before 0.7.
 - Feet stand on the ground instead of in the ground
 - Almost all of LSL implemented
 - Fixes prim to prim collision
-
-===================== Older release notes ====================
 
 ==== r11766 ====
 
