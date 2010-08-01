@@ -6,9 +6,13 @@
 2 - In some Linux/Unix systems you may encounter issues running OpenSim
 because of missing packages for running mono. Please look at
 http://opensimulator.org/wiki/Build_Instructions
-While you don't need to *build* this distribution (it's binary) that page may give you some ideas for which mono-related packages are missing.
 
-3 - In some Linux/Unix systems, you may encounter issues related to the Open Dynamics Engine library, ODE.  For example,
+While you don't need to *build* this distribution (it's binary) that
+page may give you some ideas for which mono-related packages are
+missing.
+
+3 - In some Linux/Unix systems, you may encounter issues related to
+the Open Dynamics Engine library, ODE.  For example,
 
 -------------------------
 07:58:59 - [PHYSICS]: creating OpenDynamicsEngine
@@ -33,9 +37,14 @@ Exception: System.EntryPointNotFoundException: dInitODE
 Application is terminating: True
 -------------------------
 
-If you encounter ODE issues, it's because the packaged libode.so is not appropriate for your system. In that case, you will have to compile the ODE library from source. At opensimulator.org there are very good instructions on how to do that:
+If you encounter ODE issues, it's because the packaged libode.so is
+not appropriate for your system. In that case, you will have to
+compile the ODE library from source. At opensimulator.org there are
+very good instructions on how to do that:
 http://opensimulator.org/wiki/PhysicsEngines
 
-After compiling, don't forget to copy the new library to the bin directory of the diva distribution, something like this:
+After compiling, don't forget to copy the new library to the bin
+directory of the diva distribution, something like this:
+
   $ cp /usr/local/lib/libode.so /mydir/diva-rxxx/bin
 You will have to do this after updates too.

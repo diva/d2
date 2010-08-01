@@ -1,10 +1,23 @@
-The diva distribution of OpenSim uses Metaverse Ink (MI for short) services in the following manner:
+The diva distribution of OpenSim uses Metaverse Ink (MI for short)
+services in the following manner:
 
-- During configuration (Configure.exe): MI is invoked via an HTTP call for statistical purposes. We don't track the number of downloads, we track the number of executions of the configuration tool. The only data collected is the public IP address that comes in that HTTP call, so that we can have an accurate count of how many machines are using this distribution. 
+- During configuration (Configure.exe): MI is invoked via an HTTP call
+  for statistical purposes. We don't track the number of downloads, we
+  track the number of executions of the configuration tool. The only
+  data collected is the public IP address that comes in that HTTP
+  call, so that we can have an accurate count of how many machines are
+  using this distribution.
 
-- During OpenSim execution: the default configuration of this distribution of OpenSim uses MI Search for indexing the public (searchable) data of the simulators. This is done in the normal way that OpenSim uses indexing and search services. The configuration for this service is under the [DataSnapshot] section in file DivaPreferences.ini. You can turn it off by overriding it in MyWorld.ini, before running OpenSim, like this:
+- During OpenSim execution: the default configuration of this
+  distribution of OpenSim uses MI Search for indexing the public
+  (searchable) data of the simulators. This is done in the normal way
+  that OpenSim uses indexing and search services. The configuration
+  for this service is under the [DataSnapshot] section in file
+  DivaPreferences.ini. You can turn it off by overriding it in
+  MyWorld.ini, before running OpenSim, like this:
 
 [DataSnapshot]
     index_sims = false
 
-- During updates (Update.exe): MI is invoked via an HTTP call for this tool to get new release information, and for statistical purposes.
+- During updates (Update.exe): MI is invoked via an HTTP call for this
+  tool to get new release information, and for statistical purposes.

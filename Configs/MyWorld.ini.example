@@ -38,7 +38,7 @@
     LoginURL = "http://127.0.0.1:9000"
     WebAddress = "http://127.0.0.1:9000"
 	
-    ;; The Wifi Administrator account, both for Wifi and Inworld "God"
+    ;; The Wifi Administrator account
     AdminFirst = "Wifi"
     AdminLast = "Admin"
     AdminEmail = "admin@localhost"
@@ -48,8 +48,7 @@
 
     ;; Variables for your mail server
     ;; Users will get email notifications from this account.
-    ;; (There is a default account for everyone, but please use yours)
     SmtpHost = "smtp.gmail.com"
     SmtpPort = "587"
-    ;SmtpUsername = "your_email@gmail.com"
-    ;SmtpPassword = "your_password_for_that_account"
+    SmtpUsername = "your_email@gmail.com"
+    SmtpPassword = "secret"

@@ -1,0 +1,90 @@
+***      Instructions for configuring DNS             ***
+***      for diva distribution of OpenSim             ***
+
+This note is critical to people running viewers in the same private
+network where OpenSim is running -- for example, home networks. If
+that's not your case, you can still read this as an FYI, but it's not
+so critical.
+
+---
+
+*** FIREWALL AND  PORT FORWARDING ***
+
+The first thing you need to do is to open up ports on the firewall of the
+laptop/desktop where you will run OpenSim. Open:
+
+TCP port 9000
+UDP ports 9000, 9001, 9002, 9003
+
+Next, you need to setup port forwarding on your router, so that all
+traffic to TCP port 9000 and UDP ports 9000-9003, is forwarded
+to the machine where your OpenSim runs. If you don't know how to
+do this, use Google. This site 
+http://portforward.com/
+is particularly informative.
+
+*** DOMAIN NAME ***
+
+If you run viewers in the same private network where OpenSim is
+running, I strongly advise working with domain names (i.e. things like
+cnn.com) instead of IP addresses (i.e. things like 78.54.132.45). The
+former give a level of abstraction that isolates you from the many
+mistakes and router issues that the latter are prone to. Specifically,
+with the new HG 1.5 security measures in place, the use of IP
+addresses in certain home networks with certain routers will likely
+prevent you from Hypergriding around.
+
+Domain names are extremelly easy to obtain and configure. You can buy
+your own from several vendors or you can get one for free from
+
+  http://dyndns.com
+
+If you don't want to deal with paid domain name registration
+and DNS configuration, I highly recommend the free dyndns service. 
+It's super easy! So get one.
+
+*** NAT ISSUES ***
+
+Many home routers are unable to serve traffic from inside the network
+to the external domain name or IP address of the router. If that's the
+case with your router, or even if it isn't, do the following.
+
+In every computer of your private network that runs viewers, you
+must provide the DNS translation directly. This is done by adding an
+entry in the hosts file. All operating systems have a hosts file; see
+
+  http://en.wikipedia.org/wiki/Hosts_(file)
+
+for where to find this file and how to edit it (you need root
+permissions). 
+
+Add an entry to the hosts file that looks like this
+
+OpenSim_local_IP       your_domain_name
+
+OpenSim_local_IP should be the local network IP address of the machine
+where OpenSim is running. To find out this IP address, type 'ipconfig'
+(Windows) or 'ifconfig' (*ix) on the machine that runs OpenSim.  For
+example, in my case, I have
+
+192.168.1.105   divacanto.dyndns.org
+
+on one of my laptops. This is the IP that my home router gives
+to the desktop where I run OpenSim.
+
+I also run the viewer on that desktop. Using 192.168.1.105 would also
+work, but in this particular case, the entry on that desktop is:
+
+127.0.0.1   divacanto.dyndns.org
+
+If you run the viewer on the same machine as you run OpenSim, I
+recommend using the second entry (127.0.0.1), because you won't have
+to change it.
+
+That's it!
+
+*** VERY IMPORTANT ***
+
+If the machine where OpenSim is running later gets assigned a new
+local IP address, you must update both the hosts file(s) and the
+external DNS (dyndns or other). Then restart OpenSim.

@@ -1,5 +1,72 @@
 *** Release Notes ***
 
+PLEASE READ THESE NOTES CAREFULLY, especially if you are upgrading
+from an older release.
+
+This diva distro is based on the official 0.7 release, more
+specifically on the 0.7-post-fixes branch. 
+The exact GIT tag is shown on the name of the zip file.
+
+This is a major release, with major changes across the board.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7_Release
+
+** Changes in configuration variables
+
+The changes are inumerous. IF YOU GOT THIS RELEASE THROUGH AN UPDATE,
+YOU MUST RUN CONFIGURE AGAIN, so that the new configurations are put
+in place. 
+
+** Changes in Networking assumptions
+
+This new release features HG 1.5, an improved version of the Hypergrid
+architecture that includes a fair amount of security. 
+(see http://opensimulator.org/wiki/0.7_Release#Hypergrid_changes)
+
+This added security imposes a few more constraints on how to set up
+your network *properly*. THESE CHANGES AFFECT PRIMARILY HOME NETWORKS,
+whose routers often have NAT issues.
+
+Due to these changes, it is advised that people provide domain names
+instead of IP addresses in the configurations. In home networks, the
+use of an IP address as the external host name of the world may
+prevent you from either logging in or hypergriding out (this depends
+heavily on your router).
+
+For more information and useful advice, see doc/DNS.txt
+
+** New diva distro addon: Wifi
+
+This new release features an embedded Web application called
+Wifi. Wifi handles user registrations to your world.
+
+For more information, see doc/WIFI.txt
+
+** What to expect on first run
+
+If you are upgrading from an older release, your first run of this
+release will exhibit unusual behaviors. All subsequent runs will be
+normal. Here are some of the things that you should expect from the
+first run:
+
+- Startup will take more time. This is due to DB changes. The more
+  assets your world has, the longer this takes. Don't interrupt that
+  process.
+- On first login, avatar appearances will be gone. You need to wear
+  them again.
+- Home information will be gone. You need to set your home location
+  again. 
+
+** Troubleshooting
+
+See http://opensimulator.org/wiki/0.7_Release#Troubleshooting
+
+===================== Older release notes ====================
+
+=== r12751 ===
+
 This diva distro is based on the official 0.6.9 release. 
 The exact GIT tag is shown on the name of the zip file.
 
@@ -37,8 +104,6 @@ only bug fixes in OpenSim.
 * Various performance improvements
 * Various stability improvements
 
-
-===================== Older release notes ====================
 
 ==== r12274 ====
 

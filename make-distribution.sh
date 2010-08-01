@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-opensimdir=../opensim-diva-origin/diva-distribution
+opensimdir=../opensim
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -10,13 +10,14 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=13352
+tag=13458
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
 cd $wd
 echo Making Diva Distribution $distdir
 mkdir $distdir
+mkdir $distdir/doc
 cp -r $opensimdir/bin $distdir
 cp -r $opensimdir/WifiPages $distdir
 cp $opensimdir/README.txt $distdir/OSREADME.txt
@@ -59,23 +60,30 @@ rm *.pdb *.log *.ini *.jpg *.JPG
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.xml config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/*
 
-# Copy config files
-echo Copying config files
+# Copy config, license and doc files
+echo Copying config and doc files
 cd $wd
-cp Configs/INSTALL.txt $distdir
 cp Configs/README.txt $distdir
-cp Configs/LICENSE.txt $distdir
-cp Configs/MYSQL.txt $distdir
-cp Configs/MONO.txt $distdir
-cp Configs/MI.txt $distdir
-cp Configs/TROUBLESHOOTING.txt $distdir
 cp Configs/RELEASENOTES.txt $distdir
-cp Configs/IMPORTANT.txt $distdir
-cp Configs/OpenSim.ini $distdir/bin
-cp Configs/DivaPreferences* $distdir/bin/config-include
-cp Configs/MyWorld* $distdir/bin/config-include
-cp Configs/RegionConfig* $distdir/bin/Regions
+cp Configs/LICENSE.txt $distdir
+cp Configs/MI.txt $distdir
 cp Configs/DotNetZip.txt $distdir/ThirdPartyLicenses
+
+cp Configs/IMPORTANT.txt $distdir
+
+cp Configs/OpenSim.ini $distdir/bin
+cp Configs/DivaPreferences.ini $distdir/bin/config-include
+cp Configs/MyWorld.ini.example $distdir/bin/config-include
+cp Configs/RegionConfig.ini.example $distdir/bin/Regions
+
+cp Configs/INSTALL.txt $distdir
+cp Configs/doc/ADVANCED.txt $distdir/doc
+cp Configs/doc/DNS.txt $distdir/doc
+cp Configs/doc/MYSQL.txt $distdir/doc
+cp Configs/doc/MONO.txt $distdir/doc
+cp Configs/doc/OSQUESTIONS.txt $distdir/doc
+cp Configs/doc/TROUBLESHOOTING.txt $distdir/doc
+cp Configs/doc/WIFI.txt $distdir/doc
 
 # Copy tools
 echo Copying tools
@@ -91,8 +99,8 @@ cp $libdir/"Objects Library (small).iar" $distdir/bin/Library
 # Zip it
 echo Zipping...
 chmod +rwx $distdir -R
-/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
-#zip -r $distdir.zip $distdir > out
+#/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
+zip -r $distdir.zip $distdir > out
 rm out
 
 

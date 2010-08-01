@@ -6,7 +6,8 @@
 #                                             #
 # $ [mono] Configure.exe                      #
 #                                             #
-# See http://metaverseink.com/blog/?p=36      #
-# for further instructions.                   #
+# See RELEASENOTES.txt for important          #
+# information on the many changes that affect #
+# your installation.                          #
 #                                             #
 ###############################################

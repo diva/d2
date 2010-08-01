@@ -1,0 +1,22 @@
+While running OpenSim for the first time, you will be asked a few
+questions related to the "Estate" and the owner of the regions. Given
+that the diva distro comes with 4 regions, you will be asked some of
+the questions multiple times. Here is a typical interaction:
+
+...
+Your region is not part of an estate.
+Do you wish to join an existing estate? [no]: no  <---- first time
+New estate name [My Estate]: My Estate
+...
+The current estate has no owner set.
+Estate owner first name [Test]: Test
+Estate owner last name [User]: User
+Password: 123
+Email []: my@email.com
+...
+
+The estate questions repeat for the other 3 regions.
+Typical answers are:
+
+Do you wish to join an existing estate? [no]: yes <---- other times
+Estate name to join [None]: My Estate

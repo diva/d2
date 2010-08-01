@@ -6,13 +6,26 @@
     If you are in Linux, MySQL is probably already installed:
     $ mysql --version
 
-Installing and configuring MySQL can be extremelly easy or extremelly difficult depending on your operating system and your prior knowledge in system administration. Installing MySQL in modern Windows versions is straightforward, and you shouldn't encounter any major issues. Similarly, most modern Linux systems already have MySQL installed; you just need to Google for how to configure it and run the server as demon in your particular version of linux. 
-The difficulties increase for older operating systems which may not run the right version of MySQL (5 or greater is recommended). If you encounter difficulties running MySQL, make sure to use plenty of Google, or ask a sys admin for help. 
+Installing and configuring MySQL can be extremelly easy or extremelly
+difficult depending on your operating system and your prior knowledge
+in system administration. Installing MySQL in modern Windows versions
+is straightforward, and you shouldn't encounter any major
+issues. Similarly, most modern Linux systems already have MySQL
+installed; you just need to Google for how to configure it and run the
+server as demon in your particular version of linux.  The difficulties
+increase for older operating systems which may not run the right
+version of MySQL (5 or greater is recommended). If you encounter
+difficulties running MySQL, make sure to use plenty of Google, or ask
+a sys admin for help.
      
-After installation, start MySql server, and start the command line console for the mysql root account.
+After installation, start MySql server, and start the command line
+console for the mysql root account.
+
   $ mysql -u root -p -h localhost
+
 If this doesn't work, try su or sudo as root
   $ sudo mysql
+
 Next,
    - create a schema called  opensim:
          mysql> create database opensim;

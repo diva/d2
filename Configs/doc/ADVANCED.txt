@@ -1,0 +1,76 @@
+*** Diva distribution advanced tips ***
+
+You can change the value of any configuration variable included in the
+distribution, but you should do it by overriding them instead of
+changing them directly. Of special importance are these files:
+
+  bin/config-include/DivaPreferences.ini
+  bin/OpenSim.ini
+
+If you want to change the values of some variables DO NOT change them
+on those files directly. Instead, use MyWorld.ini to override the
+values. This is because future releases of the diva distro will likely
+have important updates in these two files that you should not miss.
+
+For example, suppose you wanted to change the size of the physics
+capsule for avatars, which is captured in OpenSim.ini under the
+section [ODEPhysicsSettings] by the configuration variable
+
+    av_capsule_radius = 0.37
+
+Leave it as is in OpenSim.ini. Edit MyWorld.ini, add the section and
+override the variable, like this:
+
+[ODEPhysicsSettings]
+    av_capsule_radius = 0.20
+
+The Update tool migrates your own MyWorld.ini to the new installation
+preserving all the changes you have done.
+
+*** Changes in regions setup ***
+
+Region configuration is in bin/Regions/RegionConfig.ini. Edit that
+file with any text editor, and change whatever you like -- including
+adding and removing regions, changing their locations, names, etc.
+
+If you add regions, please use a UUID generator to get new random
+UUIDs. Try this: http://www.guidgenerator.com/
+
+Next time you start bin/OpenSim.exe the new information will be used.
+The Update tool migrates your changes to this file into new releases.
+
+Note that if you change the regions' locations on the map, this may
+affect users' login, as their home locations may not be valid
+anymore. You'll need to set their homes again.
+
+*** Changes in DB connection ***
+
+DB configuration is in bin/config-include/MyWorld.ini. Edit that file
+with any text editor. Notice one or more occurrences of the database
+connection information. If you are familiar with MySQL, you will know
+what to do. Whatever changes you make to the connection information
+will have to be made in all occurrences of the connection string.
+
+What this means is that you can have a grid consisting of multiple
+standalones without having to run several servers (aka UGRM). You can
+have the MySQL server on one machine, and have all of your simulators
+use it directly.
+
+The Update tool migrates your changes to this file into new releases.
+
+*** Backups ***
+
+I strongly advise you to set up automatic backups of your
+database. Please see instructions elsewhere on how to do that for
+MySQL.
+
+Additionally, I also strongly recommend making periodic OARs of your
+regions' content, and periodic IARs of your inventory.
+
+OpenSim is alpha software, bugs happen. Better safe than sorry.
+
+*** Troubleshooting your data ***
+
+When everything fails, remember that all data is stored on your MySQL
+server. You can always use the MySQL client to see what is wrong with
+your data, and correct it when necessary.

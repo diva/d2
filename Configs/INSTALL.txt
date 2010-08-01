@@ -1,41 +1,56 @@
 *** Diva Distribution of OpenSim ***
 
-The Diva distribution is a binary distribution. As such, it is much simpler to install than the official OpenSim distribution, which is sources-only. If you come across web pages with instructions for installing OpenSim, please keep this in mind -- this distribution does not need anything related to getting and compiling source code (e.g. git, nant, etc).
+The Diva distribution is a binary distribution. As such, it is very
+simple to install. If you come across web pages with instructions for
+installing OpenSim, please keep this in mind -- this distribution does
+not need anything related to getting and compiling source code
+(e.g. git, nant, etc).
 
-Follow these steps for installation of this OpenSim distribution.
+Follow these 5 (6 in *ix) steps for installation of this OpenSim distribution.
  
 [If Linux/Unix,
  0 - Install Mono 2.4.2 or higher. See
-     MONO.txt
+     doc/MONO.txt
      for important instructions on how to setup mono for
      OpenSim]
      
  1 - Install MySQL and, optionally, MySQLAdmin. See
-     MYSQL.txt
+     doc/MYSQL.txt
      for important instructions on how to setup MySQL for 
-     this distribution
+     this distribution.
 
+ 2 - Set up your network properly and create a domain name for the
+     machine where this OpenSim world runs. See
+     doc/DNS.txt
+     for important instructions on how to configure your network.
+
+ 3 - Create an account in gmail for sending email notifications. See
+     doc/WIFI.txt 
+     for important instructions related to Wifi, a diva distro addon 
+     for user registrations.
      
- 2 - Change to bin and run Configure.exe, the application. This will
+ 4 - Change to bin and run Configure.exe, the application. This will
      start a console application that will automatically configure your
      OpenSim.
      (If in Linux, type 
       $ mono Configure.exe)
      Answer the few questions that it asks.
-     If you want to change your answers, run it again.
-
+     - If you want to change your answers, run it again.
+     - After configuring with Configure.exe, you can always change the 
+       configurations manually by editing 
+       bin/config-include/MyWorld.ini
      
- 3 - In bin, run OpenSim.exe, the application. This will start a
+ 5 - In bin, run OpenSim.exe, the application. This will start a
      console application.
      (If in Linux, type 
       $ mono OpenSim.exe)
+     Answer the few questions that it asks. See 
+     doc/OSQUESTIONS.txt
+     for typical questions and answers.
 
      OpenSim has several console commands, you can learn about them in
      http://opensimulator.org
 
-     For creating a normal user account, type:
-     # create user
-     
      For flattening the terrain, type:
      # terrain fill 21
      
@@ -44,8 +59,6 @@ Follow these steps for installation of this OpenSim distribution.
      
  That's it for OpenSim! For connecting the client to your world, see
  http://opensimulator.org/wiki/Connecting
- The loginuri of your world is:
- http://your_IP_address:9000
  
 
 ------------------------------------------------------------------
@@ -57,16 +70,11 @@ Update.exe
 Then, shutdown OpenSim.exe in the old release and start 
 OpenSim.exe in the new release.
 
-IMPORTANT: Don't run Configure.exe on your updated diva release,
-because that will override your world configuration with a fresh
-configuration, and you will loose your previous regions.
-
-
 ------------------------------------------------------------------
 For advanced configuration options, please see
-ADVANCED.txt
+doc/ADVANCED.txt
 
 ------------------------------------------------------------------
 
 For troubleshooting running OpenSim, please see
-TROUBLESHOOTING.txt
+doc/TROUBLESHOOTING.txt

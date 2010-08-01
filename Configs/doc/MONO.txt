@@ -1,0 +1,33 @@
+***          Instructions for installing Mono        ***
+***                 for OpenSim                       **
+*** Linux/Unix ONLY. Windows users don't need mono.  ***
+
+There isn't one single set of instructions for installing mono on your
+Linux/Unix machine -- the installation depends on your flavour of
+Linux/Unix. With luck, you will find the mono installer for the exact
+version of your operating system here:
+http://www.go-mono.com/mono-downloads/download.html
+
+The mono community provides additional installers beyond those
+available by the Mono project. Use Google or your favorite site for
+information about how to install mono on your operating system.
+
+Important things to keep in mind:
+
+* OpenSim requires mono 2.4.2 or higher. Older versions of mono will
+  not run OpenSim. Because of this requirement, depending on your
+  operating system, you may need to install mono from sources.
+
+* Some of the most recent versions of mono may not run OpenSim
+  well. Please research and ask around to find out about other
+  people's experiences with mono and OpenSim.
+
+* The mono project consists of the Mono framework itself, along with
+  several other components such as monodevelop, monodoc, etc. If you
+  don't plan to develop further applications with mono, the only thing
+  you need to run OpenSim is the mono framework itself.
+
+Once you install mono, type this:
+$ mono --version
+
+Make sure you have the right version installed.

@@ -1,0 +1,91 @@
+***          Instructions for configuring Wifi        ***
+
+Wifi is a web application specifically designed with the diva distro
+in mind. It's installation-free, and requires only a very simple
+configuration step. Features include:
+
+- Account creation, optionally controlled by the administrator
+- Configurable default avatars for new accounts
+- Account updates by both users and administrator
+- Account deletion by administrator
+- Password recovery via email
+- Simple user inventory management
+
+In the diva distro, Wifi comes embeded with the simulator itself. That
+is, by running the simulator you also run Wifi. The URL for Wifi is
+
+  http://your_domain_name:9000/wifi
+
+During the configuration process you will be asked a few simple
+questions about your Wifi, namely the name, password and email for the
+administrator account, whether you want account creation to be
+controlled by you or not, and the credentials for a Gmail account that
+will enable Wifi to send mail to you and your users.
+
+*** CONTROLLED VS UNCONTROLLED ACCOUNT CREATION ***
+
+Wifi can create new accounts in two manners: uncontrolled and
+controlled. 
+
+If you choose to have controlled account creation, every time someone
+creates an account, the Wifi Admin account will receive an email
+notifying of such an event (make sure you have the Wifi Admin's email
+address properly set). You should then login to Wifi as administrator,
+and choose USER MANAGEMENT. You will be presented with a list of all
+pending accounts, which you can then approve or delete.
+
+If you choose to have uncontrolled account creation, then anyone can
+create an account in your world without going through your approval.
+
+*** CONFIGURABLE DEFAULT AVATARS ***
+
+When users sign up, they can choose between 3 avatars: male, female and
+neutral. It's up to you to decide what these 3 default avatars look
+like. Here is how you can configure them.
+
+Once your OpenSim is up & running, create 3 accounts (using Wifi) with
+the following names:
+
+Male Avatar
+Female Avatar
+Neutral Avatar
+
+Then login to the world under each of those accounts, and set their
+appearances however you like. You can add prim attachments.
+
+That's it!
+
+From then on, new accounts that choose either one of the default
+avatars will get a copy of their appearances.
+
+*** SMTP ***
+
+By default, Wifi sends mail via Gmail's SMTP secure server. If you
+wish to stick to this simple default, get an account in Gmail
+specifically for this purpose before running the configuration tool.
+
+You can easily change this default after the initial configuration by
+providing another SMTP server and account in
+  config-include/MyWorld.ini 
+(the obvious configuration variables starting with Smtp).
+
+*** SSL UNDER MONO ***
+
+(If you're in Windows, ignore this section; if you're in *ix, read on)
+
+SSL certificates are needed in order to send mail via Gmail.
+Unfortunately, mono has some issues regarding SSL certificates, so
+depending on which version of mono you have, your mileage with secure
+email may vary. 
+
+Before you run OpenSim, you need to import the certificates, like
+this:
+
+  $ mozroots --import --ask-remove
+  $ certmgr -ssl smtps://smtp.gmail.com:465
+    (answer yes to all the questions)
+
+If you find that Wifi is not sending emails, non-secure email,
+i.e. port 25, doesn't require SSL, so it will work if you can find
+such an SMTP server.
+

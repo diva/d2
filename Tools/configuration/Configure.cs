@@ -14,12 +14,14 @@ namespace MetaverseInk.Configuration
         private static string adminFirst = "Wifi";
         private static string adminLast = "Admin";
         private static string adminPasswd = "secret";
-        private static string adminEmail = "admin@loaclhost";
+        private static string adminEmail = "admin@localhost";
         private static string ipAddress = "127.0.0.1";
         private static string platform = "1"; // 1 for .NET; 2 for mono
         private static int baseLocationX = 0, baseLocationY = 0;
         private static bool confirmationRequired = false;
         private static bool myWorldReconfig = false;
+        private static string gmailAccount = string.Empty;
+        private static string gmailPasswd = string.Empty;
 
         private enum RegionConfigStatus : uint
         {
@@ -49,43 +51,55 @@ namespace MetaverseInk.Configuration
             Console.Write("MySql database password for opensim account: ");
             dbPasswd = Console.ReadLine();
 
-            Console.Write("Your IP address or domain name (default 127.0.0.1 not reacheable from outside): ");
+            Console.Write("Your external domain name (preferred) or IP address: ");
             ipAddress = Console.ReadLine();
             if (ipAddress == string.Empty)
                 ipAddress = "127.0.0.1";
 
-            Console.Write("This installation is going to run on \n (1) .NET/Windows \n (2) *ix/Mono \nType 1 or 2 (default 1): ");
+            Console.Write("This installation is going to run on \n [1] .NET/Windows \n [2] *ix/Mono \nChoose 1 or 2 [1]: ");
             platform = Console.ReadLine();
             if (platform == string.Empty)
                 platform = "1";
             platform = platform.Trim();
 
             Console.WriteLine("\nThe next questions are for configuring Wifi,\nthe web application where your users can register.\n");
-            Console.Write("Wifi Admin first name (default Wifi): ");
+            Console.Write("Wifi Admin first name [Wifi]: ");
             string input = Console.ReadLine();
             if (input != string.Empty)
                 adminFirst = input;
 
-            Console.Write("Wifi Admin last name (default Admin): ");
+            Console.Write("Wifi Admin last name [Admin]: ");
             input = Console.ReadLine();
             if (input != string.Empty)
                 adminLast = input;
 
-            Console.Write("Wifi Admin password (default secret): ");
+            Console.Write("Wifi Admin password [secret]: ");
             input = Console.ReadLine();
             if (input != string.Empty)
                 adminPasswd = input;
 
-            Console.Write("Wifi Admin email: ");
+            Console.Write("Wifi Admin email [none]: ");
             input = Console.ReadLine();
             if (input != string.Empty)
                 adminEmail = input;
 
-            Console.Write("User account creation [o]pen or [c]ontrolled (default [o]): ");
+            Console.Write("User account creation [o]pen or [c]ontrolled [o]: ");
             string conf = Console.ReadLine();
             if (conf != string.Empty && conf[0] == 'c')
                     confirmationRequired = true;
 
+            Console.WriteLine("Wifi sends email notifications via gmail, by default.");
+            Console.Write("Gmail user name [none]: ");
+            input = Console.ReadLine();
+            if (input != string.Empty)
+                gmailAccount = input;
+            
+            Console.Write("Gmail password [none]: ");
+            input = Console.ReadLine();
+            if (input != string.Empty)
+                gmailPasswd = input;
+
+            Console.WriteLine("");
         }
 
         private static RegionConfigStatus CheckRegionConfig()
@@ -231,6 +245,11 @@ namespace MetaverseInk.Configuration
                             if (line.Contains("AdminEmail"))
                                 line = line.Replace("admin@localhost", adminEmail);
 
+                            if (line.Contains("SmtpUsername"))
+                                line = line.Replace("your_email", gmailAccount);
+                            if (line.Contains("SmtpPassword"))
+                                line = line.Replace("secret", gmailPasswd);
+
                             tw.WriteLine(line);
                         }
                     }
@@ -279,12 +298,18 @@ namespace MetaverseInk.Configuration
             Console.WriteLine("\n***************************************************");
             Console.WriteLine("Your world is " + worldName);
             Console.WriteLine("Your loginuri is http://" + ipAddress + ":9000");
-            Console.WriteLine("Your Wifi app is http://" + ipAddress + ":9000");
+            Console.WriteLine("Your Wifi app is http://" + ipAddress + ":9000/wifi");
             Console.WriteLine("You admin account for Wifi is:");
-            Console.WriteLine("  " + adminFirst + " " + adminLast);
-            Console.WriteLine("  passwd: " + adminPasswd +"\n");
+            Console.WriteLine("  username: " + adminFirst + " " + adminLast);
+            Console.WriteLine("  passwd:   " + adminPasswd +"\n");
+            if (gmailAccount == string.Empty)
+                Console.WriteLine("Remember to set the Smtp Account for email notifications");
+            else
+                Console.WriteLine("Your users get email notifications from " + gmailAccount + "@gmail.com");
             if (myWorldReconfig)
                 Console.WriteLine("\nNOTE: config-include/MyWorld.ini has been reconfigured.\nPrevious configuration: config-include/MyWorld.ini.old.\nPlease revise the new configuration.\n");
+            else
+                Console.WriteLine("Your world's configuration is config-include/MyWorld.ini.\nPlease revise it.");
             Console.WriteLine("***************************************************\n");
             Console.Write("<Press enter to exit>");
             Console.ReadLine();
