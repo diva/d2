@@ -78,7 +78,7 @@ namespace MetaverseInk.Configuration
             if (input != string.Empty)
                 adminPasswd = input;
 
-            Console.Write("Wifi Admin email [none]: ");
+            Console.Write("Wifi Admin email [admin@localhost]: ");
             input = Console.ReadLine();
             if (input != string.Empty)
                 adminEmail = input;
@@ -239,7 +239,7 @@ namespace MetaverseInk.Configuration
                             if (line.Contains("AdminFirst"))
                                 line = line.Replace("Wifi", adminFirst);
                             if (line.Contains("AdminLast"))
-                                line = line.Replace("Admin", adminLast);
+                                line = line.Replace("Administrator", adminLast);
                             if (line.Contains("AdminPassword"))
                                 line = line.Replace("secret", adminPasswd);
                             if (line.Contains("AdminEmail"))

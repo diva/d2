@@ -1,8 +1,9 @@
 ###############################################
-#	       MANDATORY ACTION               #
+#	           ATTENTION                  #
 #                                             #
-# For this upgrade to complete, go to the new #
-# installation folder and run                 # 
+# If you are upgrading from a release older   #
+# than r13458, go to the new installation     #
+# folder and run                              # 
 #                                             #
 # $ [mono] Configure.exe                      #
 #                                             #

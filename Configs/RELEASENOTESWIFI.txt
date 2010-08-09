@@ -1,0 +1,16 @@
+*** Release Notes ***
+
+diva-wifi-0-7-0-1
+
+Changes since previous release:
+
+- added welcome page at /wifi/welcome.html
+- separated splash.html from index.html for easier customization
+- separated more pieces apart for easier customization
+- added favicon
+- added auto session expiration after 30 min of inactivity
+- assorted graphic design touchups (thanks Ai Austin!)
+
+----------------------------------------
+First release. Yey! Everything is new.
+Read READWIFI.txt.

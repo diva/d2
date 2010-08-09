@@ -1,4 +1,4 @@
-***          Instructions for configuring Wifi        ***
+***  Instructions for configuring and customizing Wifi      ***
 
 Wifi is a web application specifically designed with the diva distro
 in mind. It's installation-free, and requires only a very simple
@@ -21,6 +21,9 @@ questions about your Wifi, namely the name, password and email for the
 administrator account, whether you want account creation to be
 controlled by you or not, and the credentials for a Gmail account that
 will enable Wifi to send mail to you and your users.
+
+There is a separate distribution of Wifi targeted to grids. 
+Instructions are found elsewhere.
 
 *** CONTROLLED VS UNCONTROLLED ACCOUNT CREATION ***
 
@@ -89,3 +92,20 @@ If you find that Wifi is not sending emails, non-secure email,
 i.e. port 25, doesn't require SSL, so it will work if you can find
 such an SMTP server.
 
+*** CUSTOMIZING WIFI ***
+
+You can safely customize the following html files under WifiPages:
+
+- splash.html
+- header.html
+- footer.html
+- welcome.html
+- links.html
+
+Add your new images to the images folder.
+Do not change any of the other files, or Wifi may stop working.
+
+*** ACKNOWLEDGEMENTS ***
+
+Ai Austin has contributed many useful suggestions for improving the
+graphic design of Wifi. Thank you!

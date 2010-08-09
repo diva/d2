@@ -14,15 +14,17 @@ namespace Update
 
         public static void Main(string[] args)
         {
-            string name = GetZipFile();
-            if (!name.Equals(string.Empty))
-            {
-                if (Unzip(name))
-                {
-                    CopyConfigs(name);
-                    CopyLibrary(name);
-                }
-            }
+            //string name = GetZipFile();
+            //if (!name.Equals(string.Empty))
+            //{
+            //    if (Unzip(name))
+            //    {
+            //        CopyConfigs(name);
+            //        CopyLibrary(name);
+            //        CopyWifi(name);
+            //    }
+            //}
+            CopyWifi("r1234");
             DisplayInfo();
         }
 
@@ -260,6 +262,67 @@ namespace Update
                 Console.WriteLine("* Unable to migrate Library data. (Reason: " + e.Message + ")");
             }
         }
+
+        public static void CopyWifi(string newReleaseName)
+        {
+            Console.WriteLine("If you made changes to Wifi html files, those can be copied to the new release.");
+            Console.Write("Do you want to copy your Wifi files? (y/n) [n]: ");
+            string input = Console.ReadLine();
+            if (input != string.Empty && input.StartsWith("y"))
+            {
+                string[] custom = new string[] { "splash.html", "welcome.html", "header.html", "footer.html", "links.html" };
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string currentWifiDirPath = Path.Combine(Path.Combine(currentDirectory, ".."), "WifiPages");
+                DirectoryInfo releasesRoot = Directory.GetParent(Directory.GetParent(currentDirectory).FullName);
+                string newReleaseDirWifiFullPath = Path.Combine(Path.Combine(releasesRoot.FullName, newReleaseName), "WifiPages");
+
+                string oldfile = string.Empty;
+                string newfile = string.Empty;
+                foreach (string fileName in custom)
+                {
+                    try
+                    {
+                        Console.WriteLine("Copying " + fileName + "...");
+                        oldfile = Path.Combine(currentWifiDirPath, fileName);
+                        newfile = Path.Combine(newReleaseDirWifiFullPath, fileName);
+                        File.Copy(newfile, newfile + ".diva", true);
+                        File.Copy(oldfile, newfile, true);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("* Unable to copy. (Reason: " + e.Message + ")");
+                    }
+                }
+
+                try
+                {
+                    string[] oldimages = Directory.GetFiles(Path.Combine(currentWifiDirPath, "images"));
+                    string[] newimages = Directory.GetFiles(Path.Combine(newReleaseDirWifiFullPath, "images"));
+                    foreach (string old in oldimages)
+                    {
+                        string name = Path.GetFileName(old);
+                        if (NotIn(newimages, name))
+                        {
+                            try
+                            {
+                                Console.WriteLine("Copying images/" + name + "...");
+                                newfile = Path.Combine(Path.Combine(newReleaseDirWifiFullPath, "images"), name);
+                                File.Copy(old, newfile);
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("* Unable to copy. (Reason: " + e.Message + ")");
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("* Wifi images may not have been copied over. (Reason: " + e.Message + ")");
+                }
+            }
+        }
+
 
         private static bool NotIn(string[] files, string fileName)
         {

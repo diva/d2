@@ -40,8 +40,9 @@
 	
     ;; The Wifi Administrator account
     AdminFirst = "Wifi"
-    AdminLast = "Admin"
+    AdminLast = "Administrator"
     AdminEmail = "admin@localhost"
+    AdminPassword = "secret"
 
     ;; Do you want to be able to control grid registrations?
     AccountConfirmationRequired = false

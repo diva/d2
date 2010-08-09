@@ -1,5 +1,32 @@
 *** Release Notes ***
 
+IF YOU ARE UPGRADING FROM A RELEASE PRIOR TO r13458, PLEASE READ THE
+NOTES FOR r13458 CAREFULLY (below). If you are upgrading from r1348,
+this is a minor release from there; nothing special needs to be done.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.0.1_Release
+
+** Changes in Diva Wifi
+
+- added welcome page at /wifi/welcome.html
+- added splash.html different from index.html for easier customization
+- separated more pieces apart for easier customization
+- added favicon
+- added auto session expiration after 30 min of inactivity
+- assorted graphic design touchups (thanks Ai Austin!)
+
+** Changes in Update tool
+
+Next time you update, you will be given the option to copy over your
+customized Wifi pages. See doc/WIFI.txt for the list of safely
+customizable pages.
+
+===================== Older release notes ====================
+
+==== r13458 ====
+
 PLEASE READ THESE NOTES CAREFULLY, especially if you are upgrading
 from an older release.
 
@@ -54,6 +81,8 @@ first run:
 - Startup will take more time. This is due to DB changes. The more
   assets your world has, the longer this takes. Don't interrupt that
   process.
+- You will be asked a few questions from OpenSim itself. See 
+  doc/OSQUESTIONS.txt
 - On first login, avatar appearances will be gone. You need to wear
   them again.
 - Home information will be gone. You need to set your home location
@@ -62,8 +91,6 @@ first run:
 ** Troubleshooting
 
 See http://opensimulator.org/wiki/0.7_Release#Troubleshooting
-
-===================== Older release notes ====================
 
 === r12751 ===
 

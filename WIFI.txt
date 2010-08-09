@@ -1,0 +1,39 @@
+*************** WIFI *****************
+
+Wifi is a diva distro addon to OpenSim that supports user
+registrations and management over the Web. It features:
+
+- Account creation
+- Account modification
+- Password recovery via email
+- Inventory listing and management
+- Administrator access to accounts
+- Optional administrator control over account creation for private
+  worlds
+
+In the diva distro, Wifi runs within the simulator itself for greater
+convenience - no need to run an Apache web server, everything comes in
+one single package, the simulator. To access Wifi, run OpenSim.exe and
+then point your Web browser to 
+http://your_external_hostname:9000/wifi
+
+*** SMTP ACCOUNT REQUIREMENT ***
+
+A few features in Wifi, such as password recovery, result in emails
+sent to users. In order to send these emails, Wifi can use any SMTP
+server out there, including yours if you have one.
+
+For greater conveninence, the default SMTP server used by Wifi is
+Gmail. Please create an account in Gmail specifically for this
+purpose. During the configuration step, you will be asked for the user
+name and password of this account.
+
+If you don't want to use Gmail, leave the answers blank during the
+configuration step. Then, after configuration, edit
+bin/config-include/MyWorld.ini 
+and manually enter the data for your SMTP server in the obvious places
+(they all start with Smtp).
+
+*** LINUX/MONO EXTRA STEP ***
+
+If you're running under linux/mono you need to 
