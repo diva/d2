@@ -231,6 +231,8 @@ namespace MetaverseInk.Configuration
                             }
                             if (line.Contains("gridname") || line.Contains("GridName"))
                                 line = line.Replace("My World", worldName);
+                            if (line.Contains("gridnick"))
+                                line = line.Replace("hippogrid", worldName.ToLower().Replace(' ', '_'));
                             if (line.Contains("WelcomeMessage"))
                                 line = line.Replace("Welcome!", "Welcome to " + worldName + "!");
                             if (line.Contains("AccountConfirmationRequired") && confirmationRequired)

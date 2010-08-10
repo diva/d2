@@ -33,6 +33,14 @@
 [GatekeeperService]
     ExternalName = "http://127.0.0.1:9000"
 
+[GridInfoService]
+    login = http://127.0.0.1:9000/
+    gridname = "My World"
+    gridnick = "hippogrid"
+    welcome = http://127.0.0.1:9000/wifi/welcome.html
+    register = http://127.0.0.1:9000/wifi/user/account
+    password = http://127.0.0.1:9000/wifi/forgotpassword
+
 [WifiService]
     GridName = "My World"
     LoginURL = "http://127.0.0.1:9000"
