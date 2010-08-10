@@ -1,5 +1,6 @@
 *** Release Notes ***
 
+This is diva-r13553 corresponding to OpenSim 0.7.0.1.
 IF YOU ARE UPGRADING FROM A RELEASE PRIOR TO r13458, PLEASE READ THE
 NOTES FOR r13458 CAREFULLY (below). If you are upgrading from r1348,
 this is a minor release from there; nothing special needs to be done.
@@ -10,7 +11,7 @@ See http://opensimulator.org/wiki/0.7.0.1_Release
 
 ** Changes in Diva Wifi
 
-- added welcome page at /wifi/welcome.html
+- added welcome page at /wifi/welcome.html (for -loginpage)
 - added splash.html different from index.html for easier customization
 - separated more pieces apart for easier customization
 - added favicon

@@ -14,17 +14,16 @@ namespace Update
 
         public static void Main(string[] args)
         {
-            //string name = GetZipFile();
-            //if (!name.Equals(string.Empty))
-            //{
-            //    if (Unzip(name))
-            //    {
-            //        CopyConfigs(name);
-            //        CopyLibrary(name);
-            //        CopyWifi(name);
-            //    }
-            //}
-            CopyWifi("r1234");
+            string name = GetZipFile();
+            if (!name.Equals(string.Empty))
+            {
+                if (Unzip(name))
+                {
+                    CopyConfigs(name);
+                    CopyLibrary(name);
+                    CopyWifi(name);
+                }
+            }
             DisplayInfo();
         }
 
@@ -285,7 +284,8 @@ namespace Update
                         Console.WriteLine("Copying " + fileName + "...");
                         oldfile = Path.Combine(currentWifiDirPath, fileName);
                         newfile = Path.Combine(newReleaseDirWifiFullPath, fileName);
-                        File.Copy(newfile, newfile + ".diva", true);
+                        if (File.Exists(newfile))
+                            File.Copy(newfile, newfile + ".diva", true);
                         File.Copy(oldfile, newfile, true);
                     }
                     catch (Exception e)

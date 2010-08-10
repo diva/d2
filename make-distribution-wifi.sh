@@ -10,8 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=13532
-distdir=diva-wifi-0-7-0-1
+distdir=wifi-0-7-0-1
 
 # Create distribution directory and start filling it
 cd $wd
@@ -23,6 +22,7 @@ cp $opensimdir/bin/Diva.Wifi.ScriptEngine.dll $distdir/bin
 cp $opensimdir/bin/Diva.OpenSimServices.dll $distdir/bin
 cp $opensimdir/addon-modules/Wifi/Wifi.ini.example $distdir/bin
 cp -r $opensimdir/WifiPages $distdir
+rm $distdir/WifiPages/*~
 
 # Copy config, license and doc files
 echo Copying config and doc files
