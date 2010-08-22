@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-distdir=wifi-0-7-0-1-a
+distdir=wifi-0-7-0-1-b
 
 # Create distribution directory and start filling it
 cd $wd
@@ -31,6 +31,7 @@ mkdir $distdir/doc
 cp Configs/READMEWIFI.txt $distdir
 cp Configs/RELEASENOTESWIFI.txt $distdir
 cp Configs/LICENSEWIFI.txt $distdir
+cp Configs/LICENSELOGO.txt $distdir
 
 cp Configs/doc/WIFI.txt $distdir/doc
 

@@ -67,6 +67,7 @@ cd $wd
 cp Configs/README.txt $distdir
 cp Configs/RELEASENOTES.txt $distdir
 cp Configs/LICENSE.txt $distdir
+cp Configs/LICENSELOGO.txt $distdir
 cp Configs/MI.txt $distdir
 cp Configs/DotNetZip.txt $distdir/ThirdPartyLicenses
 

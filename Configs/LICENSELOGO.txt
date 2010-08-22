@@ -1,0 +1,34 @@
+The logo image "Powered by OpenSimulator" given by
+WifiPages/images/PoweredByOS.png 
+is a modified version of the OpenSimulator logo created by Adam Frisby
+and Gryc. Original license available at
+http://opensimulator.org/wiki/Image:Opensimulator.svg 
+Final logo available here, by Crista Lopes (aka Diva), also under the
+same license, and with the additional exemption below.
+
+The logo image "Diva Touch" given by
+WifiPages/images/diva.png 
+has been created by Crista Lopes (aka Diva), and is distributed under
+a Creative Commons licence, with the exemption below.
+
+===          EXEMPTION            ===
+=== INTENT AND USE OF THESE LOGOS ===
+
+The "Powered by OpenSimulator" logo is intended to give due credit to
+the OpenSimulator project, which is the platform upon which your
+virtual world is built. The "Diva Touch" logo is intended to give due
+credit to the diva distribution project which includes the Wifi web
+application. These logos can be used freely as long as they are used
+DISCRETELY on the graphic design material associated with your virtual
+world.
+
+UNDER NO CIRCUNSTANCES SHOULD THESE LOGOS BE USED IN LIEU OF YOUR OWN
+LOGO FOR YOUR OWN VIRTUAL WORLD NOR SHOULD THEY BE USED TO CONVEY THE
+IDEA THAT YOUR VIRTUAL WORLD IS HOSTED OR IS IN ANY WAY AN INTEGRAL
+PART OF THE OPENSIMULATOR PROJECT OR THE DIVA DISTRIBUTION PROJECT.
+
+PLEASE NOTE:
+
+The use of these logos is not required by neither the OpenSimulator
+license nor the Diva Wifi license. You can modify Wifi so that they are
+not included.
