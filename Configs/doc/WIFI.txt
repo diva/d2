@@ -105,7 +105,22 @@ You can safely customize the following html files under WifiPages:
 Add your new images to the images folder.
 Do not change any of the other files, or Wifi may stop working.
 
+*** ADVANCED AVATAR  CONFIGURATION ***
+
+Wifi can support more than the 3 avatar types Male, Female and Neutral:
+you can have any number of pre-existing avatar types. In order to do that,
+edit your configuration file (MyWorld.ini if diva distro, or any other if using Wifi
+on a grid), and locate the [WifiService] section. Add the avatar types you want
+like this:
+
+AvatarAccount_<AvatarType> = "<FirstName> <LastName>"
+
+Your users will see the option <AvatarType> on the registration page. You
+then need to create the specified account(s), and dress it/them up as you want.
+
 *** ACKNOWLEDGEMENTS ***
 
+Marck has made major contributions to the functionality of Wifi.
 Ai Austin has contributed many useful suggestions for improving the
-graphic design of Wifi. Thank you!
+graphic design of Wifi. 
+Thank you all!

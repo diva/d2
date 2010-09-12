@@ -1,5 +1,68 @@
 *** Release Notes ***
 
+diva-wifi-0-7-0-2
+
+Thank you Marck for major contributions to Wifi!
+
+*** Changes since previous release:
+
+- Added logos and links to them in the front pages
+- Allow configuration of arbitrary default avatars: now not just 3
+  (Male, Female, Neutral) but as many as you want. See Wifi
+  documentation http://wiki.github.com/diva/d2/wifi
+- Restructured style sheet and HTML templates and added fluid style
+  sheet replacing the original style.css. Fluid adapts to the size of
+  the browser window
+- Added support for JavaScript
+- Added expansion/contraction of inventory folders
+- Added option "Inventory" to the administrator's main menu
+- Provided optional variables for displaying version and runtime
+  information
+- Updated the client download links
+- Add column with "Created" date and time to both pending users list
+  and accounts list
+- Add user title column to user list
+- Make user account lists sortable
+- Added LoginURI to the activation message
+
+
+*** Configuration changes:
+
+NOTE: This change affects primarily users running Wifi on a
+grid. Users of diva distro installations will have this updated
+automatically via DivaPreferences.ini, and should not worry.
+
+The way default avatar types is specified has changed. There used to
+be exactly 3 types, specified as
+  FemaleAvatarAccount = "Female Avatar"
+  MaleAvatarAccount = "Male Avatar"
+  NeutralAvatarAccount = "Neutral Avatar"
+
+The syntax has now changed to
+  AvatarAccount_Neutral = "Neutral Avatar"
+  AvatarAccount_Female = "Female Avatar"
+  AvatarAccount_Male = "Male Avatar"
+
+Make sure to update your configuration.
+
+This new syntax enables the existence of an arbitrary number of avatar
+types, like this:
+  AvatarAccount_<AvatarType> = "<FirstName> <LastName>"
+
+*** Bug fixes since previous release:
+
+- Catch bad To address on sendmail
+- Require new accounts to have non-empty first and last names
+- Don't send the password by email
+- Removed empty rows at the end of lists on composed web pages
+- Stay on current page when links "Activate" or "Ignore" are selected
+  in empty pending accounts list
+- List only non-pending accounts in user search results
+- Correct confirmation text for deleting user account
+- Fix spelling error in password recovery web page
+
+----------------------------------------
+
 diva-wifi-0-7-0-1
 
 Changes since previous release:
@@ -10,6 +73,7 @@ Changes since previous release:
 - added favicon
 - added auto session expiration after 30 min of inactivity
 - assorted graphic design touchups (thanks Ai Austin!)
+
 
 ----------------------------------------
 First release. Yey! Everything is new.

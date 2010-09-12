@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=13558
+tag=13861
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
@@ -59,15 +59,17 @@ rm OpenSim.Tools.lslc.*
 
 rm *.pdb *.log *.ini *.jpg *.JPG
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.xml config-include/storage
-rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/*
+rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
 
 # Copy config, license and doc files
 echo Copying config and doc files
 cd $wd
 cp Configs/README.txt $distdir
 cp Configs/RELEASENOTES.txt $distdir
+cp Configs/RELEASENOTESWIFI.txt $distdir
 cp Configs/LICENSE.txt $distdir
-cp Configs/LICENSELOGO.txt $distdir
+cp Configs/LICENSEWIFI.txt $distdir
+cp Configs/LICENSEIMAGES.txt $distdir
 cp Configs/MI.txt $distdir
 cp Configs/DotNetZip.txt $distdir/ThirdPartyLicenses
 

@@ -1,4 +1,4 @@
-Copyright (c) Crista Lopes (aka diva) and additional contributors
+Copyright (c) Crista Lopes (aka diva), Marck and additional contributors
 listed in specific source files. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
