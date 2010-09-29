@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-distdir=wifi-0-7-0-2-a
+distdir=wifi-0-7-0-2-b
 
 # Create distribution directory and start filling it
 cd $wd

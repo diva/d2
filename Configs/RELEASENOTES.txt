@@ -1,9 +1,25 @@
 *** Release Notes ***
 
-This is diva-r13861 corresponding to OpenSim 0.7.0.2.
+This is diva-r13981 corresponding to OpenSim 0.7.0.2-post-fixes.
 IF YOU ARE UPGRADING FROM A RELEASE PRIOR TO r13458, PLEASE READ THE
 NOTES FOR r13458 CAREFULLY (below). If you are upgrading from r1348 onwards,
 this is a minor release from there; nothing special needs to be done.
+
+** Changes in OpenSim
+
+Minor bug fix in REST console/
+
+** Changes in Diva Wifi
+
+See RELEASENOTESWIFI.txt
+
+** Changes in diva distro tools
+
+None at this time.
+
+===================== Older release notes ====================
+
+==== r13861 ====
 
 ** Changes in OpenSim
 
@@ -16,8 +32,6 @@ Many! See RELEASENOTESWIFI.txt for important information.
 ** Changes in diva distro tools
 
 None at this time.
-
-===================== Older release notes ====================
 
 ==== r13458 ====
 

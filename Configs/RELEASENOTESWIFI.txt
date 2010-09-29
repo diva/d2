@@ -1,6 +1,20 @@
 *** Release Notes ***
 
-diva-wifi-0-7-0-2
+diva-wifi-0-7-0-2[-b]
+
+Thank you Marck for major contributions to Wifi!
+
+*** Bug fixes since previous release:
+
+- Added some help text to the user search form.
+- Make padding of URLs more robust by not assuming a particular order of attributes in HTML elements.
+- Minor improvements to inventory loading status message.
+- Quick fix for non-working inventory operations.
+- Do not pad "mailto" URLs with session info.
+
+----------------------------------------
+
+diva-wifi-0-7-0-2[-a]
 
 Thank you Marck for major contributions to Wifi!
 
