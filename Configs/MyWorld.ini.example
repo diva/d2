@@ -1,7 +1,4 @@
 [Startup]
-    ; ### Set the password
-    storage_connection_string="Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
-
     ; SmartThreadPool is reported to work well on Mono/Linux, but 
     ; UnsafeQueueUserWorkItem has been benchmarked with better
     ; performance on .NET/Windows
@@ -19,19 +16,34 @@
 [GridService]
     Region_My_World_1 = "DefaultRegion, FallbackRegion"
 
+[HGInventoryService]
+    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+
+[HGAssetService]
+    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+
+[HGInventoryAccessModule]
+    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+    ;; If you want to protect your assets from being copied by foreign visitors
+    ;; uncomment the next line. You may want to do this on sims that have licensed content.
+    ; OutboundPermission = False
+
 [DataSnapshot]
     gridname = "My World"
 
 [LoginService]
     WelcomeMessage = "Welcome!"
-
-    HomeURI = "http://127.0.0.1:9000"
     GatekeeperURI = "http://127.0.0.1:9000"
-    InventoryServerURI = "http://127.0.0.1:9000"
-    AssetServerURI = "http://127.0.0.1:9000"
+
+    SRV_HomeURI = "http://127.0.0.1:9000"    
+    SRV_InventoryServerURI = "http://127.0.0.1:9000"
+    SRV_AssetServerURI = "http://127.0.0.1:9000"
+    SRV_ProfileServerURI = "http://127.0.0.1:9000"
+
 
 [GatekeeperService]
     ExternalName = "http://127.0.0.1:9000"
+    AllowTeleportsToAnyRegion = false
 
 [GridInfoService]
     login = http://127.0.0.1:9000/

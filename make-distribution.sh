@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-opensimdir=../opensim
+opensimdir=../../diva-distro-git/diva-distribution
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -8,14 +8,14 @@ wd=`pwd`
 # Get the tag
 cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
-#tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
+#tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=13981
+tag=14920
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
 cd $wd
-echo Making Diva Distribution $distdir
+echo Making Diva Distribution $distdir from $opensimdir
 mkdir $distdir
 mkdir $distdir/doc
 cp -r $opensimdir/bin $distdir
@@ -36,7 +36,7 @@ rm SubversionSharp.* svn_client-1.dll
 rm OpenSim.Grid.*
 
 # Unsed DBs
-rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll*
+rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll* 
 
 # Unused Physics
 rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
@@ -49,15 +49,15 @@ rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventor
 #rm OpenSim.Region.ScriptEngine.Shared.YieldProlog.dll*
 
 # Unused clients
-rm *Sirikata* *VWoHTTP*
+rm *MXP* *VWoHTTP*
 
 # Unused Diva components
-rm Diva.Data.MySQL.* Diva.LoginService.* Diva.Wifi.ProcessorTest.*
+rm Diva.LoginService.* Diva.Wifi.ProcessorTest.* Diva.Data.SQLite*
 
 # Misc
 rm OpenSim.Tools.lslc.*
 
-rm *.pdb *.log *.ini *.jpg *.JPG
+rm *.pdb *.log *.jpg *.JPG
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.xml config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
 
@@ -104,6 +104,7 @@ cp $libdir/"Objects Library (small).iar" $distdir/bin/Library
 echo Zipping...
 chmod +rwx $distdir -R
 #/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
+#/c/cygwin/bin/zip -r $distdir.zip $distdir > out
 zip -r $distdir.zip $distdir > out
 rm out
 
