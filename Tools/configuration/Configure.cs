@@ -10,6 +10,8 @@ namespace MetaverseInk.Configuration
     public class Configure
     {
         private static string worldName = "My World";
+        private static string dbSchema = "opensim";
+        private static string dbUser = "opensim";
         private static string dbPasswd = "secret";
         private static string adminFirst = "Wifi";
         private static string adminLast = "Admin";
@@ -41,6 +43,7 @@ namespace MetaverseInk.Configuration
 
         private static void GetUserInput()
         {
+            string tmp;
             Console.Write("Name of your world: ");
             worldName = Console.ReadLine();
             if (worldName == string.Empty)
@@ -48,7 +51,17 @@ namespace MetaverseInk.Configuration
             else
                 worldName = worldName.Trim();
 
-            Console.Write("MySql database password for opensim account: ");
+            Console.Write("MySql database schema name: [opensim]");
+            tmp = Console.ReadLine();
+            if (tmp != string.Empty)
+                dbSchema = tmp;
+
+            Console.Write("MySql database user account: [opensim]");
+            tmp = Console.ReadLine();
+            if (tmp != string.Empty)
+                dbUser = tmp;
+
+            Console.Write("MySql database password for that account: ");
             dbPasswd = Console.ReadLine();
 
             Console.Write("Your external domain name (preferred) or IP address: ");
@@ -205,6 +218,8 @@ namespace MetaverseInk.Configuration
         {
             CheckMyWorldConfig();
 
+            string connString = String.Format("ConnectionString = \"Data Source=localhost;Database={0};User ID={1};Password={2};\"", dbSchema, dbUser, dbPasswd);
+
             try
             {
                 using (TextReader tr = new StreamReader("config-include/MyWorld.ini.example"))
@@ -214,8 +229,8 @@ namespace MetaverseInk.Configuration
                         string line;
                         while ((line = tr.ReadLine()) != null)
                         {
-                            if (line.Contains("Password"))
-                                line = line.Replace("***", dbPasswd);
+                            if (line.Contains("ConnectionString"))
+                                line = connString;
                             if (line.Contains("127.0.0.1"))
                                 line = line.Replace("127.0.0.1", ipAddress);
                             if (line.Contains("async_call_method") && platform.Equals("1"))
