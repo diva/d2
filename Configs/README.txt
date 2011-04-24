@@ -1,5 +1,13 @@
 You have downloaded Diva's binary distribution of OpenSim. 
 
+******************************************************************
+THIS DISTRIBUTION IS AVAILABLE AS-IS. THERE ARE NEITHER WARRANTIES
+OF IT FUNCTIONING IN YOUR SETUP NOR SUPPORT BEYOND THE INCLUDED
+DOCUMENTATION. PLEASE READ THE COMPLETE LICENSE AND MAKE SURE YOU
+UNDERSTAND IT. IF THE TERMS OF USE ARE NOT ACCEPTABLE TO YOU, DO
+NOT USE THIS SOFTWARE.
+******************************************************************
+
 This distribution contains a simplified and pre-configured 
 version of OpenSim targeting Hypergrided standalone virtual 
 worlds. It contains:
@@ -53,7 +61,7 @@ distribution, or any others, will likely break.
 
 ------------------------------------------
 
-This distribution is available as-is; there are neither guarantees
+This distribution is available as-is; there are neither warranties
 nor support beyond the included documentation. 
 For issue reports, please use
 http://github.com/diva/diva-distribution/issues

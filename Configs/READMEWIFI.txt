@@ -1,6 +1,14 @@
 You have downloaded Diva's binary distribution of the Wifi addon to
 OpenSimulator. Please read LICENSEWIFI.txt before using this addon.
 
+******************************************************************
+THIS SOFTWARE IS AVAILABLE AS-IS. THERE ARE NEITHER WARRANTIES
+OF IT FUNCTIONING IN YOUR SETUP NOR SUPPORT BEYOND THE INCLUDED
+DOCUMENTATION. PLEASE READ THE COMPLETE LICENSE AND MAKE SURE YOU
+UNDERSTAND IT. IF THE TERMS OF USE ARE NOT ACCEPTABLE TO YOU, DO
+NOT USE THIS SOFTWARE.
+******************************************************************
+
 Wifi is a web front-end for OpenSimulator designed for small-to-medium
 worlds. This distribution of Wifi targets grid configurations of
 OpenSimulator. It is meant to run as a plugin to the Robust server that
