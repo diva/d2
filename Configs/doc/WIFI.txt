@@ -118,6 +118,10 @@ AvatarAccount_<AvatarType> = "<FirstName> <LastName>"
 Your users will see the option <AvatarType> on the registration page. You
 then need to create the specified account(s), and dress it/them up as you want.
 
+*** LOCALIZATION ***
+
+See https://github.com/diva/d2/wiki/Wifi (Localization)
+
 *** ACKNOWLEDGEMENTS ***
 
 Marck has made major contributions to the functionality of Wifi.

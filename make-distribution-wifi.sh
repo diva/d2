@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-opensimdir=../opensim
+opensimdir=../../diva-distro-git/diva-distribution
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-distdir=wifi-0-7-0-2-b
+distdir=wifi-0-7-1-a
 
 # Create distribution directory and start filling it
 cd $wd
@@ -19,6 +19,7 @@ mkdir $distdir
 mkdir $distdir/bin
 cp $opensimdir/bin/Diva.Wifi.dll $distdir/bin
 cp $opensimdir/bin/Diva.Wifi.ScriptEngine.dll $distdir/bin
+cp $opensimdir/bin/Diva.Data.MySQL.dll $distdir/bin
 cp $opensimdir/bin/Diva.OpenSimServices.dll $distdir/bin
 cp $opensimdir/addon-modules/Wifi/Wifi.ini.example $distdir/bin
 cp -r $opensimdir/WifiPages $distdir

@@ -1,14 +1,21 @@
 ###############################################
 #	           ATTENTION                  #
+#           --- REQUIRED ACTION ---           #
 #                                             #
-# If you are upgrading from a release prior   #
-# to r13458, go to the new installation       #
-# folder and run                              # 
+# Before running the new version, go to       #
+# the new installation folder and run:        #
 #                                             #
 # $ [mono] Configure.exe                      #
 #                                             #
+# Answer the questions with the exact same    #
+# data that you have in your current          #
+# config-include/MyWorld.ini                  #
+# If you had made additional changes to       #
+# MyWorld.ini, make sure to port those to the #
+# new MyWorld.ini after running Configure.exe #
+#                                             #
 # See RELEASENOTES.txt for important          #
-# information on the many changes that affect #
+# information on the changes that affect      #
 # your installation.                          #
 #                                             #
 ###############################################

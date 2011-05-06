@@ -15,6 +15,7 @@
 
 [GridService]
     Region_My_World_1 = "DefaultRegion, FallbackRegion"
+    Gatekeeper = "http://127.0.0.1:9000"
 
 [HGInventoryService]
     ProfileServerURI = "http://127.0.0.1:9000/profiles"

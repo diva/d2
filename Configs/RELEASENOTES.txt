@@ -1,13 +1,38 @@
 *** Release Notes ***
 
-This is diva-r13981 corresponding to OpenSim 0.7.0.2-post-fixes.
+This is diva-r15402 corresponding to OpenSim 0.7.1-post_fixes.
 IF YOU ARE UPGRADING FROM A RELEASE PRIOR TO r13458, PLEASE READ THE
-NOTES FOR r13458 CAREFULLY (below). If you are upgrading from r1348 onwards,
-this is a minor release from there; nothing special needs to be done.
+NOTES FOR r13458 CAREFULLY (below). 
 
 ** Changes in OpenSim
 
-Minor bug fix in REST console/
+See http://opensimulator.org/wiki/0.7.1_Release
+
+** Noteworthy configuration changes that affect your D2 installation
+
+- Configuration variables renaming under [LoginService]
+- Additional variable under [GridService]
+
+YOU MUST RUN Configure.exe ON YOUR NEW INSTALLATION. Answer the questions
+with the exact same data that you have on your current 
+config-include/MyWorld.ini. If you had made additional changes to your
+MyWorld.ini, make sure to port those after running Configure.exe
+
+** Changes in diva distro tools
+
+- Configure tool now asks for the names of the DB schema and DB user
+
+** Changes in Diva Wifi
+
+See RELEASENOTESWIFI.txt for important information.
+
+===================== Older release notes ====================
+
+==== r13981 ====
+
+** Changes in OpenSim
+
+Minor bug fix in REST console.
 
 ** Changes in Diva Wifi
 
@@ -16,8 +41,6 @@ See RELEASENOTESWIFI.txt
 ** Changes in diva distro tools
 
 None at this time.
-
-===================== Older release notes ====================
 
 ==== r13861 ====
 

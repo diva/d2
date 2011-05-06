@@ -60,6 +60,8 @@ to it. More specifically:
   your grid. See doc/WIFI.txt for *important* information about how to
   configure and use Wifi.
 
+  c) Notice the comment under [DatabaseService] in Wifi.ini.example
+
 6 - Shutdown your Robust server and restart it.
 
 7 - Point your Web browser to http://yourdomain:8002/wifi and take it

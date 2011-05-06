@@ -14,7 +14,7 @@ information about how to install mono on your operating system.
 
 Important things to keep in mind:
 
-* OpenSim requires mono 2.4.2 or higher. Older versions of mono will
+* OpenSim requires mono 2.4.3 or higher. Older versions of mono will
   not run OpenSim. Because of this requirement, depending on your
   operating system, you may need to install mono from sources.
 

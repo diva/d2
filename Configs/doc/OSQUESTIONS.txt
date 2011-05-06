@@ -4,9 +4,10 @@ that the diva distro comes with 4 regions, you will be asked some of
 the questions multiple times. Here is a typical interaction:
 
 ...
-Your region is not part of an estate.
-Do you wish to join an existing estate? [no]: no  <---- first time
-New estate name [My Estate]: My Estate
+Region Test 1 is not part of an estate.
+No existing estates found.  You must create a new one.
+New estate name [My Estate]: <----- <hit enter>
+
 ...
 The current estate has no owner set.
 Estate owner first name [Test]: Test
@@ -18,5 +19,7 @@ Email []: my@email.com
 The estate questions repeat for the other 3 regions.
 Typical answers are:
 
-Do you wish to join an existing estate? [no]: yes <---- other times
-Estate name to join [None]: My Estate
+Do you wish to join region Test 2 to an existing estate (yes/no)? [yes]: <----- <hit enter>
+Name of estate to join.  Existing estate names are (My Estate) [My Estate]: <----- <hit enter>
+
+

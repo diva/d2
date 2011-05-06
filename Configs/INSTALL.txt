@@ -41,7 +41,8 @@ Follow these 5 (6 in *ix) steps for installation of this OpenSim distribution.
        bin/config-include/MyWorld.ini
      
  5 - In bin, run OpenSim.exe, the application. This will start a
-     console application.
+     console application. If running on a 64-bit machine, run
+     OpenSim.32BitLaunch.exe instead.
      (If in Linux, type 
       $ mono OpenSim.exe)
      Answer the few questions that it asks. See 

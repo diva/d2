@@ -1,5 +1,24 @@
 *** Release Notes ***
 
+diva-wifi-0-7-1
+
+*** Changes since previous release:
+
+- UsersInworld, UsersTotal, RegionsTotal shown in splash page
+- Support for localization, i.e. local language. See 
+  https://github.com/diva/d2/wiki/Wifi (Localization)
+- Allow configuration of home location for new accounts.
+  Config var: HomeLocation
+- For new accounts, use type of default avatar as inventory folder name
+- Administrators and users can view, add, and delete linked regions (hyperlinks)
+- Added content types for for extensions ".txt" and ".xml".
+- Added configuration option ServePath_* for arbitrary paths to be served
+- New experimental feature for Wifi admins: Remote Console. 
+  Not documented because it's not secure enough yet. Ignore for now.
+
+
+----------------------------------------
+
 diva-wifi-0-7-0-2[-b]
 
 Thank you Marck for major contributions to Wifi!
@@ -13,7 +32,6 @@ Thank you Marck for major contributions to Wifi!
 - Do not pad "mailto" URLs with session info.
 
 ----------------------------------------
-
 diva-wifi-0-7-0-2[-a]
 
 Thank you Marck for major contributions to Wifi!

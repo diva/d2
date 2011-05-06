@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=14920
+tag=15402
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
@@ -36,10 +36,10 @@ rm SubversionSharp.* svn_client-1.dll
 rm OpenSim.Grid.*
 
 # Unsed DBs
-rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll* 
+rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll* Castle* mssql_connection.ini
 
 # Unused Physics
-rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
+rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll MonoXnaCompactMaths.dll Bullet* Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
 
 # Unused plugins
 rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventory* OpenSim.ApplicationPlugins.Rest.Regions.dll*
@@ -55,10 +55,10 @@ rm *MXP* *VWoHTTP*
 rm Diva.LoginService.* Diva.Wifi.ProcessorTest.* Diva.Data.SQLite*
 
 # Misc
-rm OpenSim.Tools.lslc.*
+rm OpenSim.Tools.lslc.* 
 
 rm *.pdb *.log *.jpg *.JPG
-rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.xml config-include/storage
+rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.* config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
 
 # Copy config, license and doc files
