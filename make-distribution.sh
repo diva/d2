@@ -1,6 +1,7 @@
 #! /usr/bin/sh
 
-opensimdir=../../diva-distro-git/diva-distribution
+#opensimdir=../../diva-distro-git/diva-distribution
+opensimdir=diva-r15402
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -10,7 +11,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=15402
+tag=15402-b
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it

@@ -8,7 +8,7 @@
 
 [DatabaseService]
     ; ### Set the password (again)
-    ConnectionString = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;"
+    ConnectionString = "Data Source=localhost;Database=opensim;User ID=opensim;Password=***;Old Guids=true;Allow Zero Datetime=true;"
 
 [Network]
     http_listener_port = 9000

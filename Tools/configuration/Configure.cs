@@ -170,8 +170,8 @@ namespace MetaverseInk.Configuration
                                 if (count == 0)
                                 {
                                     Random rand = new Random();
-                                    baseLocationX = rand.Next(5000 - 2048, 5000 + 2048);
-                                    baseLocationY = rand.Next(5000 - 2048, 5000 + 2048);
+                                    baseLocationX = rand.Next(1500 - 1024, 1500 + 1024);
+                                    baseLocationY = rand.Next(1500 - 1024, 1500 + 1024);
                                     line = "Location = \"" + baseLocationX + "," + baseLocationY + "\"";
                                 }
                                 else if (count == 1)

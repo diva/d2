@@ -17,6 +17,7 @@ cd $wd
 echo Making Diva Wifi Distribution $distdir
 mkdir $distdir
 mkdir $distdir/bin
+cp $opensimdir/bin/Diva.Data.dll $distdir/bin
 cp $opensimdir/bin/Diva.Wifi.dll $distdir/bin
 cp $opensimdir/bin/Diva.Wifi.ScriptEngine.dll $distdir/bin
 cp $opensimdir/bin/Diva.Data.MySQL.dll $distdir/bin
