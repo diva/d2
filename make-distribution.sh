@@ -1,7 +1,6 @@
 #! /usr/bin/sh
 
-#opensimdir=../../diva-distro-git/diva-distribution
-opensimdir=diva-r15402
+opensimdir=../../diva-distro-git/diva-distribution
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -11,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=15402-b
+tag=15592
 distdir=diva-r$tag
 
 # Create distribution directory and start filling it
@@ -105,8 +104,8 @@ cp $libdir/"Objects Library (small).iar" $distdir/bin/Library
 echo Zipping...
 chmod +rwx $distdir -R
 #/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
-#/c/cygwin/bin/zip -r $distdir.zip $distdir > out
-zip -r $distdir.zip $distdir > out
+/c/cygwin/bin/zip -r $distdir.zip $distdir > out
+#zip -r $distdir.zip $distdir > out
 rm out
 
 

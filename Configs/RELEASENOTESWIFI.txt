@@ -1,5 +1,12 @@
 *** Release Notes ***
 
+diva-wifi-0-7-1-1
+
+*** Changes since previous release:
+
+- Russian translation included in the package. Thanks Rodion Rotaru.
+
+----------------------------------------
 diva-wifi-0-7-1
 
 *** Changes since previous release:
@@ -15,7 +22,6 @@ diva-wifi-0-7-1
 - Added configuration option ServePath_* for arbitrary paths to be served
 - New experimental feature for Wifi admins: Remote Console. 
   Not documented because it's not secure enough yet. Ignore for now.
-
 
 ----------------------------------------
 

@@ -10,7 +10,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-distdir=wifi-0-7-1-a
+distdir=wifi-0-7-1-1
 
 # Create distribution directory and start filling it
 cd $wd
@@ -40,8 +40,8 @@ cp Configs/doc/WIFI.txt $distdir/doc
 # Zip it
 echo Zipping...
 chmod +rwx $distdir -R
-#/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
-zip -r $distdir.zip $distdir > out
+/c/cygwin/bin/zip -r $distdir.zip $distdir > out
+#zip -r $distdir.zip $distdir > out
 rm out
 
 

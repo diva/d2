@@ -1,7 +1,12 @@
 ###############################################
 #	           ATTENTION                  #
-#           --- REQUIRED ACTION ---           #
+# If you are upgrading from diva-r15402[-b],  #
+# this is a minor release. No further action  #
+# is necessary.                               #
 #                                             #
+# --- REQUIRED ACTION FOR OLDER RELEASES ---  #
+# If you are upgrading from releases older    #
+# than diva-r15402:                           #
 # Before running the new version, go to       #
 # the new installation folder and run:        #
 #                                             #

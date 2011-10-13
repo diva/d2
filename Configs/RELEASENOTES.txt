@@ -1,8 +1,40 @@
 *** Release Notes ***
 
-This is diva-r15402 corresponding to OpenSim 0.7.1-post_fixes.
+This is diva-r15592 corresponding to OpenSim 0.7.1.1-post_fixes. With
+respect to the previous release (r15402), this is a minor release and
+does not need any special attention. However, with respect to releases
+prior to r15402, this is a major release and requires further action.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.1.1_Release
+
+Most noteworthy, gray tiles in the map have been fixed.
+
+** Noteworthy configuration changes that affect your D2 installation
+
+None.
+
+NOTE: If you are upgrading from releases prior to r15402, YOU MUST RUN
+Configure.exe ON YOUR NEW INSTALLATION. Answer the questions with the
+exact same data that you have on your current
+config-include/MyWorld.ini. If you had made additional changes to your
+MyWorld.ini, make sure to port those after running Configure.exe
+
 IF YOU ARE UPGRADING FROM A RELEASE PRIOR TO r13458, PLEASE READ THE
 NOTES FOR r13458 CAREFULLY (below). 
+
+** Changes in diva distro tools
+
+None.
+
+** Changes in Diva Wifi
+
+See RELEASENOTESWIFI.txt.
+
+===================== Older release notes ====================
+
+==== r15402 ====
 
 ** Changes in OpenSim
 
@@ -25,8 +57,6 @@ MyWorld.ini, make sure to port those after running Configure.exe
 ** Changes in Diva Wifi
 
 See RELEASENOTESWIFI.txt for important information.
-
-===================== Older release notes ====================
 
 ==== r13981 ====
 

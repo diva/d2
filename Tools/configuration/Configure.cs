@@ -218,7 +218,7 @@ namespace MetaverseInk.Configuration
         {
             CheckMyWorldConfig();
 
-            string connString = String.Format("ConnectionString = \"Data Source=localhost;Database={0};User ID={1};Password={2};\"", dbSchema, dbUser, dbPasswd);
+            string connString = String.Format("ConnectionString = \"Data Source=localhost;Database={0};User ID={1};Password={2};Old Guids=true;Allow Zero Datetime=true;\"", dbSchema, dbUser, dbPasswd);
 
             try
             {
