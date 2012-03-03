@@ -1,6 +1,7 @@
 #! /usr/bin/sh
 
-opensimdir=../../diva-distro-git/diva-distribution
+opensimdir=../../diva-distro-2/diva-distribution
+#opensimdir=../../scratch/diva-wifi-fix-0-7-2/diva-distribution
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -10,8 +11,13 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=15592
+tag=18222
 distdir=diva-r$tag
+
+# Create language satellite assemblies for localization
+echo Generating language files
+cd $opensimdir/addon-modules/Wifi/Localization
+./make_languages.sh
 
 # Create distribution directory and start filling it
 cd $wd
@@ -27,6 +33,7 @@ cp -r $opensimdir/ThirdPartyLicenses $distdir
 
 # Clean up
 echo Cleaning up
+cd $wd
 chmod +rwx $distdir -R
 rm $distdir/WifiPages/*~
 cd $distdir/bin
@@ -36,7 +43,7 @@ rm SubversionSharp.* svn_client-1.dll
 rm OpenSim.Grid.*
 
 # Unsed DBs
-rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* OpenSim.Data.SQLite.dll* Castle* mssql_connection.ini
+rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* *.Data.SQLite.dll* Castle* mssql_connection.ini
 
 # Unused Physics
 rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll MonoXnaCompactMaths.dll Bullet* Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
@@ -57,9 +64,12 @@ rm Diva.LoginService.* Diva.Wifi.ProcessorTest.* Diva.Data.SQLite*
 # Misc
 rm OpenSim.Tools.lslc.* 
 
-rm *.pdb *.log *.jpg *.JPG
+rm *.pdb *.log *.jpg *.JPG *.tiff *.TIFF *.png *.PNG *.bpm *.BMP
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.* config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
+rm -rf assetcache/*m
+rm maptiles/*
+rm -rf ScriptEngines/*
 
 # Copy config, license and doc files
 echo Copying config and doc files
@@ -104,8 +114,8 @@ cp $libdir/"Objects Library (small).iar" $distdir/bin/Library
 echo Zipping...
 chmod +rwx $distdir -R
 #/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
-/c/cygwin/bin/zip -r $distdir.zip $distdir > out
-#zip -r $distdir.zip $distdir > out
+#/c/cygwin/bin/zip -r $distdir.zip $distdir > out
+zip -r $distdir.zip $distdir > out
 rm out
 
 

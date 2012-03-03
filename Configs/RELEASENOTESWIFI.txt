@@ -1,5 +1,26 @@
 *** Release Notes ***
 
+diva-wifi-0-7-2
+
+*** Changes since previous release:
+
+- Added missing localization dlls (does not affect anyone with English
+  language)
+
+- Support for SQLite
+
+- (This is not a new change, and it doesn't affect anyone that uses
+  the Diva distro out of the box, but it may affect those who further
+  customize it): If you are reusing an older configuration for Wifi,
+  you may not be getting the most out of it. The latest Wifi releases
+  use Diva.Data.MySql.dll as storage plugin, not
+  OpenSim.Data.MySql.dll. On of the symptoms that you are using the
+  "wrong" dll is the front page of Wifi showing 0 for all the
+  stats. If that's the case, switch it to the Diva one under
+  [DatabaseService]
+
+
+----------------------------------------
 diva-wifi-0-7-1-1
 
 *** Changes since previous release:

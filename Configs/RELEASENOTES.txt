@@ -1,9 +1,80 @@
 *** Release Notes ***
 
-This is diva-r15592 corresponding to OpenSim 0.7.1.1-post_fixes. With
-respect to the previous release (r15402), this is a minor release and
-does not need any special attention. However, with respect to releases
-prior to r15402, this is a major release and requires further action.
+This is diva-r18222 corresponding to OpenSim 0.7.3-post-fixes. With
+respect to the previous 2 releases (r16897 and r15592), this is a
+major release but does not need any special attention. However, with
+respect to releases prior to r15402, this is a major release and
+requires further action.  See release notes below for older releases.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.3_Release
+Many new features and improvements!, most notably:
+
+- You can now run OpenSim in 64 bit Windows machines without having to 
+  launch it through OpenSim.32BitLaunch.exe.  This allows OpenSimulator 
+  to address more than 2GB of memory of memory.
+- Fixed a long-standing issue where scripted attachments were corrupted 
+  for HG travellers
+- Object sit targets have been adjusted to much better match those found 
+  on the Linden grid. This is for long term compatibility purposes. 
+  Unfortunately, it means that existing objects will need to have their 
+  sit targets manually adjusted. The adjustment is <-0.1, 0, 0.118>.
+- Many performance improvements
+- Linksets now retaining their proper numbering when one set is linked 
+  with another.
+- More improvements on NPC
+
+** Changes in D2 configurations
+
+- NPC functions enabled by default. Permission set to ESTATE_OWNER, but
+  if you want to be more relaxed, this can be overriden in MyWorld.ini.
+
+** Changes in Wifi
+
+None
+
+
+===================== Older release notes ====================
+
+==== r16897 ====
+
+This is diva-r16897 corresponding to OpenSim 0.7.2-post-fixes. With
+respect to the previous 2 releases (r15592 and r15402), this is a
+major release but does not need any special attention. However, with
+respect to releases prior to r15402, this is a major release and
+requires further action.  See release notes below for older releases.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.2_Release
+Many new features and improvements!, most notably:
+
+- You can now make friends across the hypergrid and IM them
+- You can lure your HG friends into where you are
+- You can give inventory to your HG friends by dragging inventory
+  into their profile
+- You can grab HG landmarks and later teleport to those places
+
+** Changes in Wifi
+
+- Added missing localization dlls (does not affect anyone with English
+  language)
+
+- Support for SQLite (not included in diva distribution)
+
+- (This is not a new change, and it doesn't affect anyone that uses
+  the Diva distro out of the box, but it may affect those who further
+  customize it): If you are reusing an older configuration for Wifi,
+  you may not be getting the most out of it. The latest Wifi releases
+  use Diva.Data.MySql.dll as storage plugin, not
+  OpenSim.Data.MySql.dll. On of the symptoms that you are using the
+  "wrong" dll is the front page of Wifi showing 0 for all the
+  stats. If that's the case, switch it to the Diva one under
+  [DatabaseService]
+
+
+==== r15592 ====
 
 ** Changes in OpenSim
 
@@ -31,8 +102,6 @@ None.
 ** Changes in Diva Wifi
 
 See RELEASENOTESWIFI.txt.
-
-===================== Older release notes ====================
 
 ==== r15402 ====
 
