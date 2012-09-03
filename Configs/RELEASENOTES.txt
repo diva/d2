@@ -1,5 +1,43 @@
 *** Release Notes ***
 
+This is diva-r18611 corresponding to OpenSim 0.7.3.1. With respect 
+to the previous 3 releases (r18222, r16897 and r15592), this is a
+minor release, but with nice improvement. It does not need any 
+special reconfiguration. However, with respect to releases prior 
+to r15402, this is a major release and requires further action.
+See release notes below for older releases.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.3.1_Release
+Many new features and improvements!, most notably:
+
+- simple_build_permissions option added which allows owners and those
+  on the access list of a parcel to build even when the general parcel 
+  setting is to disallow object creation. 
+- More region access controls added at the simulator level. 
+  DisallowForeigners prevents Hypergrid visitors from visiting 
+  regions. DisallowResidents allows only administrators and managers
+  to visit regions. 
+- DataSnapshot now sending the correct information about the Gatekeeper
+  to the search service
+
+** Changes in D2 configurations
+
+- simple_build_permissions is enabled by default, meaning that you can
+  protect your land from general building while allowing some people
+  to build (add them to access list)
+- Default terrain is now a flat land
+
+** Changes in Wifi
+
+None
+
+
+===================== Older release notes ====================
+
+==== r18222 ====
+
 This is diva-r18222 corresponding to OpenSim 0.7.3-post-fixes. With
 respect to the previous 2 releases (r16897 and r15592), this is a
 major release but does not need any special attention. However, with
@@ -33,10 +71,6 @@ Many new features and improvements!, most notably:
 ** Changes in Wifi
 
 None
-
-
-===================== Older release notes ====================
-
 ==== r16897 ====
 
 This is diva-r16897 corresponding to OpenSim 0.7.2-post-fixes. With
