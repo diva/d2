@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-opensimdir=../../diva-distro-2/diva-distribution
+opensimdir=../diva-distribution
 #opensimdir=../../scratch/diva-wifi-fix-0-7-2/diva-distribution
 toolsdir=Tools
 libdir=Library
@@ -11,7 +11,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=18611
+tag=20232
 distdir=diva-r$tag
 
 # Create language satellite assemblies for localization

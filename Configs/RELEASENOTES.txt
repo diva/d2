@@ -1,11 +1,45 @@
 *** Release Notes ***
 
-This is diva-r18611 corresponding to OpenSim 0.7.3.1. With respect 
-to the previous 3 releases (r18222, r16897 and r15592), this is a
-minor release, but with nice improvement. It does not need any 
-special reconfiguration. However, with respect to releases prior 
-to r15402, this is a major release and requires further action.
-See release notes below for older releases.
+This is diva-r20232 corresponding to OpenSim 0.7.4. With respect to
+the previous 4 releases, this is a minor release, but with nice
+improvements. It does not need any special reconfiguration. However,
+with respect to releases prior to r15402, this is a major release and
+requires further action.  See release notes below for older releases.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.4_Release
+Many new features and improvements!, most notably:
+
+- Teleport reliability improved
+
+- Added ability to establish friendships over the Hypergrid without
+requiring both users to originate from the same OpenSimulator
+installation.
+
+- osGetGridGatekeeperURI() OSSL function added to return the Hypergrid
+gatekeeper of the current grid (if there is one). This is the first
+component of any Hypergrid address, for example the hg.osgrid.org:80
+part of hg.osgrid.org:80:<region-name> 
+
+- llRequestSimulatorData() will now return the final destination
+region co-ordinates when used for a Hypergrid location. This allows
+one to check that the final destination region is not more than the
+allowed number of map tiles away for a successful teleport (currently
+4095 map tiles or less). 
+
+** Changes in D2 configurations
+
+- Freshly created worlds are now flat by default
+
+** Changes in Wifi
+
+None
+
+
+===================== Older release notes ====================
+
+==== r18611 ====
 
 ** Changes in OpenSim
 
@@ -32,9 +66,6 @@ Many new features and improvements!, most notably:
 ** Changes in Wifi
 
 None
-
-
-===================== Older release notes ====================
 
 ==== r18222 ====
 
