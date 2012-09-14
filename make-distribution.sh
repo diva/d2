@@ -11,7 +11,7 @@ cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=20232
+tag=20232-b
 distdir=diva-r$tag
 
 # Create language satellite assemblies for localization
@@ -64,7 +64,7 @@ rm Diva.LoginService.* Diva.Wifi.ProcessorTest.* Diva.Data.SQLite*
 # Misc
 rm OpenSim.Tools.lslc.* 
 
-rm *.pdb *.log *.jpg *.JPG *.tiff *.TIFF *.png *.PNG *.bpm *.BMP
+rm *.pdb *.log *.jpg *.JPG *.tiff *.TIFF *.png *.PNG *.bpm *.BMP *.oar *~ *.db
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.* config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
 rm -rf assetcache/*m
