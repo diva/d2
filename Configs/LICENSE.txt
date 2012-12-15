@@ -1,10 +1,12 @@
-OpenSim is Copyright by its contributors. Please see OSLICENSE.txt.
+OpenSim is Copyright by its contributors. Please see OSLICENSE.txt, as
+well as ThirdPartyLicenses for the licenses associated with the
+several libraries used by OpenSim.
 
 The additional modules and tools present in this distribution are
 being distributed under the following license:
 
-Copyright (c) Metaverse Ink, Crista Lopes (aka diva) and additional
-contributors listed in specific source files. All rights reserved.
+Copyright (c) Crista Lopes (aka diva) and additional contributors
+listed in specific source files. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
