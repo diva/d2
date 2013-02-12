@@ -10,6 +10,7 @@ namespace MetaverseInk.Configuration
     public class Configure
     {
         private static string worldName = "My World";
+        private static string dbHost = "localhost";
         private static string dbSchema = "opensim";
         private static string dbUser = "opensim";
         private static string dbPasswd = "secret";
@@ -51,12 +52,17 @@ namespace MetaverseInk.Configuration
             else
                 worldName = worldName.Trim();
 
-            Console.Write("MySql database schema name: [opensim]");
+            Console.Write("MySql database host: [localhost] ");
+            tmp = Console.ReadLine();
+            if (tmp != string.Empty)
+                dbHost = tmp;
+
+            Console.Write("MySql database schema name: [opensim] ");
             tmp = Console.ReadLine();
             if (tmp != string.Empty)
                 dbSchema = tmp;
 
-            Console.Write("MySql database user account: [opensim]");
+            Console.Write("MySql database user account: [opensim] ");
             tmp = Console.ReadLine();
             if (tmp != string.Empty)
                 dbUser = tmp;
@@ -218,7 +224,7 @@ namespace MetaverseInk.Configuration
         {
             CheckMyWorldConfig();
 
-            string connString = String.Format("ConnectionString = \"Data Source=localhost;Database={0};User ID={1};Password={2};Old Guids=true;Allow Zero Datetime=true;\"", dbSchema, dbUser, dbPasswd);
+            string connString = String.Format("ConnectionString = \"Data Source={0};Database={1};User ID={2};Password={3};Old Guids=true;Allow Zero Datetime=true;\"", dbHost, dbSchema, dbUser, dbPasswd);
 
             try
             {
