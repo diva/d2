@@ -1,5 +1,11 @@
 *** Release Notes ***
 
+diva-wifi-0-7-5
+
+Added UI for managing groups under the administrator account.
+
+--------------------------------------
+
 diva-wifi-0-7-4
 
 No changes

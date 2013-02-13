@@ -20,11 +20,10 @@ worlds. It contains:
 
 3) additional modules and tools that use external services
    (such as search) and that make configuration and updates
-   as easy as possible. The source code of the additional
-   OpenSim addon modules can be found at
-   http://github.com/diva/diva-distribution/
+   as easy as possible. 
 
-4) an embedded Web application for user registrations.
+4) several additional addons, such as a Web application for user
+   registrations and Groups.
 
 5) preconfiguration for use of MySQL DB backend, ODE
    physics, and a default world consisting of multiple regions

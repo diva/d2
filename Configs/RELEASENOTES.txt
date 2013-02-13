@@ -1,5 +1,74 @@
 *** Release Notes ***
 
+This is diva-r22043 corresponding to OpenSim 0.7.5. This is a major
+release that includes several new addons. Your attention is required.
+
+* If you are updating from recent releases, edit your MyWorld.ini:
+
+ - Add a new configuration variable to [LoginService] section like so:
+   SRV_GroupsServerURI = "http://yourdomain:9000"
+   (It should be the exact same URL as the others)
+
+ - Notice a new section at the bottom of MyWorld.ini.example for the
+   new TOS module. You may want to copy that into your MyWorld.ini and
+   reconfigure it. More information below.
+
+* If you are updating from very old releases (r15402 and older),
+  please run the Configure tool again.
+
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.5_Release
+Many new features and improvements!, most notably:
+
+- Hypergrid 2.0 in place. This means improved inventory security and
+  improved configurability regarding access control. See
+  http://metaverseink.com/blog/?p=459
+
+- Suitcase folder is now under the main Inventory and can be accessed
+  at all times in the viewer
+
+
+** Diva addons
+
+Starting in this release, D2 includes a number of addons distributed
+only in binary form. These are:
+
+- Groups addon. You can create groups, and set permissions and
+  access controls based on those groups. This is a limited edition of
+  Groups, distributed free of charge in D2.
+
+  SEE https://github.com/diva/d2/wiki/Groups
+
+
+- Offline IM addon. IMs sent to avatars who aren't logged in are now
+  stored and presented to the avatars upon their login.
+
+  SEE https://github.com/diva/d2/wiki/Offline-IM
+
+
+- TOS (Terms of Service) addon. This addon is enabled by default. In
+  the default configuration, it will present foreign users with a
+  Terms of Service page that they need to accept. This will happen
+  only once.
+
+  SEE https://github.com/diva/d2/wiki/TOS
+
+
+** Changes in D2 configurations
+
+None
+
+** Changes in Wifi
+
+- Added a tos (terms of service) page for the TOS module
+
+
+===================== Older release notes ====================
+
+==== r20232 ====
+
 This is diva-r20232 corresponding to OpenSim 0.7.4. With respect to
 the previous 4 releases, this is a minor release, but with nice
 improvements. It does not need any special reconfiguration. However,
@@ -36,8 +105,6 @@ allowed number of map tiles away for a successful teleport (currently
 
 None
 
-
-===================== Older release notes ====================
 
 ==== r18611 ====
 

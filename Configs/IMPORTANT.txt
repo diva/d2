@@ -1,29 +1,10 @@
 ###############################################
 #	           ATTENTION                  #
-# If upgrading from latest releases, there is #
-# nothing to do. Change to that directory and #
-# start OpenSim there. Have fun!              #
 #                                             #
-# See RELEASENOTES.txt for important          #
-# information.                                #
+#       FURTHER ACTION IS REQUIRED            #
 #                                             #
-# If upgrading from releases prior to r15402: #
-#                                             #
-#     --- RECONFIGURATION RECOMMENDED ---     #
-#                                             #
-# In order to take advantage of the new       #
-# features (especially HG friends and IM)     #
-# you must reconfigure your world.            #
-# Before running the new version, go to       #
-# the new installation folder and run:        #
-#                                             #
-# $ [mono] Configure.exe                      #
-#                                             #
-# Answer the questions with the exact same    #
-# data that you have in your current          #
-# config-include/MyWorld.ini                  #
-# If you had made additional changes to       #
-# MyWorld.ini, make sure to port those to the #
-# new MyWorld.ini after running Configure.exe #
+#    See RELEASENOTES.txt for CRITICAL        #
+#    information about updates to your        #
+#    existing configuration.                  #
 #                                             #
 ###############################################

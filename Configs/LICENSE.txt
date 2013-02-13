@@ -1,6 +1,8 @@
 OpenSim is Copyright by its contributors. Please see OSLICENSE.txt, as
 well as ThirdPartyLicenses for the licenses associated with the
-several libraries used by OpenSim.
+several libraries used by OpenSim. Also, see DIVALICENSE.txt for the
+license associated with binary addons from Diva present in
+this distribution.
 
 The additional modules and tools present in this distribution are
 being distributed under the following license:
@@ -11,13 +13,10 @@ listed in specific source files. All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
-    * This software uses services provided by Metaverse Ink. Use of 
-      this software acknowledges and agrees to uses of those
-      services. Please see MI.txt for detailed information.
     * Redistributions of source code must retain the above copyright
       notice, this list of conditions and the following disclaimer.
     * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in
+      notices, this list of conditions and the following disclaimer in
       the documentation and/or other materials provided with the  
       distribution.
     * Neither the name of Metaverse Ink nor the names of individual

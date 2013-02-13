@@ -45,6 +45,7 @@
     SRV_AssetServerURI = "http://127.0.0.1:9000"
     SRV_FriendsServerURI = "http://127.0.0.1:9000"
     SRV_IMServerURI = "http://127.0.0.1:9000"
+    SRV_GroupsServerURI = "http://127.0.0.1:9000"
     ;; For Viewer 2
     MapTileURL = "http://127.0.0.1:9000/"
 
@@ -52,6 +53,39 @@
 [GatekeeperService]
     ExternalName = "http://127.0.0.1:9000"
     AllowTeleportsToAnyRegion = false
+
+    ;; HG 2.0 access control
+    ;; Restrictions on origin of foreign visitors.
+    ;; Are foreign visitors allowed?
+    ; ForeignAgentsAllowed = true
+    ;;
+    ;; If ForeignAgentsAllowed is true, make exceptions using AllowExcept.
+    ;; Leave blank or commented for no exceptions.
+    ; AllowExcept = "http://griefer.com:8002, http://enemy.com:8002"
+    ;;
+    ;; If ForeignAgentsAllowed is false, make exceptions using DisallowExcept
+    ;; Leave blank or commented for no exceptions.
+    ; DisallowExcept = "http://myfriendgrid.com:8002, http://myboss.com:8002"
+
+[UserAgentService]
+    ;; HG 2.0 access control
+    ; User level required to be contacted from other grids
+    ;LevelOutsideContacts = 0
+    ;; Restrictions on destinations of local users.
+    ;; Are local users allowed to visit other grids?
+    ;; What user level? Use variables of this forrm:
+    ;; ForeignTripsAllowed_Level_<UserLevel> = true | false
+    ;; For example:
+    ; ForeignTripsAllowed_Level_0 = false
+    ; ForeignTripsAllowed_Level_10 = true ; true is default
+    ;;
+    ;; If ForeignTripsAllowed is true, make exceptions using AllowExcept.
+    ;; Leave blank or commented for no exceptions.
+    ; AllowExcept_Level_10 = "http://griefer.com:8002, http://enemy.com:8002"
+    ;;
+    ;; If ForeignTripsAllowed is false, make exceptions using DisallowExcept
+    ;; Leave blank or commented for no exceptions.
+    ; DisallowExcept_Level_0 = "http://myfriendgrid.com:8002, http://myboss.com:8002"
 
 [GridInfoService]
     login = http://127.0.0.1:9000/
@@ -81,3 +115,17 @@
     SmtpPort = "587"
     SmtpUsername = "your_email@gmail.com"
     SmtpPassword = "secret"
+
+[TOSModule]
+    ;; Not enabled by default. Enable it if you like by setting this to true
+    Enabled = false
+    ;; Tell the users what this is about
+    Message = "Please read and agree to the Terms of Service"
+    ;; Should local users be shown the TOS on first login?
+    ShowToLocalUsers = false
+    ;; Should foreign users be shown the TOS on first HG login?
+    ShowToForeignUsers = true
+    ;; Change the text on that page for your own TOS.
+    ;; You'll find it under <your diva dir>/WifiPages/tos.html
+    TOS_URL = "http://127.0.0.1:9000/wifi/tos.html"
+

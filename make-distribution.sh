@@ -1,17 +1,17 @@
 #! /usr/bin/sh
 
 opensimdir=../diva-distribution
-#opensimdir=../../scratch/diva-wifi-fix-0-7-2/diva-distribution
+midir=../MIServices/addons
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
 
 # Get the tag
-cd $opensimdir
+#cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=20232-b
+tag=22043
 distdir=diva-r$tag
 
 # Create language satellite assemblies for localization
@@ -30,6 +30,13 @@ cp $opensimdir/README.txt $distdir/OSREADME.txt
 cp $opensimdir/CONTRIBUTORS.txt $distdir/OSCONTRIBUTORS.txt
 cp $opensimdir/LICENSE.txt $distdir/OSLICENSE.txt
 cp -r $opensimdir/ThirdPartyLicenses $distdir
+# Copy proprietary addons from MI
+echo Adding Metaverse Ink addons from $midir
+cp $midir/bin/Diva.Groups.dll $distdir/bin
+cp $midir/bin/Diva.MISearchModules.dll $distdir/bin
+cp $midir/bin/Diva.OfflineIM.dll $distdir/bin
+cp $midir/bin/Diva.TOS.dll $distdir/bin
+
 
 # Clean up
 echo Cleaning up
@@ -64,10 +71,10 @@ rm Diva.LoginService.* Diva.Wifi.ProcessorTest.* Diva.Data.SQLite*
 # Misc
 rm OpenSim.Tools.lslc.* 
 
-rm *.pdb *.log *.jpg *.JPG *.tiff *.TIFF *.png *.PNG *.bpm *.BMP *.oar *~ *.db
+rm *.pdb *.log *.jpg *.JPG *.tiff *.TIFF *.png *.PNG *.bpm *.BMP *.oar *.iar *~ *.db
 rm -rf addin-db-* *.Tests.dll *.Tests.*.dll TestResult.* *.Tests.dll.* config-include/storage
 rm config-include/* j2kDecodeCache/* Regions/* DataSnapshot/* 
-rm -rf assetcache/*m
+rm -rf assetcache/*
 rm maptiles/*
 rm -rf ScriptEngines/*
 
@@ -80,7 +87,8 @@ cp Configs/RELEASENOTESWIFI.txt $distdir
 cp Configs/LICENSE.txt $distdir
 cp Configs/LICENSEWIFI.txt $distdir
 cp Configs/LICENSEIMAGES.txt $distdir
-cp Configs/MI.txt $distdir
+cp Configs/LICENSEDIVA.txt $distdir
+cp Configs/PRIVACYNOTICE.txt $distdir
 cp Configs/DotNetZip.txt $distdir/ThirdPartyLicenses
 
 cp Configs/IMPORTANT.txt $distdir
@@ -103,7 +111,6 @@ cp Configs/doc/WIFI.txt $distdir/doc
 echo Copying tools
 cp $toolsdir/bin/Configure.exe $distdir/bin
 cp $toolsdir/bin/Update.exe $distdir/bin
-cp $toolsdir/bin/Ionic.Zip.dll $distdir/bin
 
 # Copy Library
 echo Copying library
@@ -116,6 +123,7 @@ chmod +rwx $distdir -R
 #/c/OptPrograms/cygwin/bin/zip -r $distdir.zip $distdir > out
 #/c/cygwin/bin/zip -r $distdir.zip $distdir > out
 zip -r $distdir.zip $distdir > out
+
 rm out
 
 
