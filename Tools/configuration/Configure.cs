@@ -102,7 +102,7 @@ namespace MetaverseInk.Configuration
             if (input != string.Empty)
                 adminEmail = input;
 
-            Console.Write("User account creation [o]pen or [c]ontrolled [o]: ");
+            Console.Write("User account creation [o]pen or [c]ontrolled [c]: ");
             string conf = Console.ReadLine();
             if (conf != string.Empty && conf[0] == 'c')
                     confirmationRequired = true;
@@ -272,6 +272,9 @@ namespace MetaverseInk.Configuration
                                 line = line.Replace("your_email", gmailAccount);
                             if (line.Contains("SmtpPassword"))
                                 line = line.Replace("secret", gmailPasswd);
+
+                            if (line.Contains("HomeLocation"))
+                                line = line.Replace("My_World_1", worldName.Replace(' ', '_') + "_1");
 
                             tw.WriteLine(line);
                         }
