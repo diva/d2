@@ -18,13 +18,13 @@
     Gatekeeper = "http://127.0.0.1:9000"
 
 [HGInventoryService]
-    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+    HomeURI = "http://127.0.0.1:9000"
 
 [HGAssetService]
-    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+    HomeURI = "http://127.0.0.1:9000"
 
 [HGInventoryAccessModule]
-    ProfileServerURI = "http://127.0.0.1:9000/profiles"
+    HomeURI = "http://127.0.0.1:9000"
     Gatekeeper = "http://127.0.0.1:9000"
     ;; If you want to protect your assets from being copied by foreign visitors
     ;; uncomment the next line. You may want to do this on sims that have licensed content.
@@ -95,6 +95,11 @@
     register = http://127.0.0.1:9000/wifi/user/account
     password = http://127.0.0.1:9000/wifi/forgotpassword
 
+[SimulatorFeatures]
+    MapImageServerURI = "http://127.0.0.1:9000/"
+    SearchServerURI = "http://127.0.0.1:9000/"
+
+
 [WifiService]
     GridName = "My World"
     LoginURL = "http://127.0.0.1:9000"
@@ -107,7 +112,7 @@
     AdminPassword = "secret"
 
     ;; Do you want to be able to control grid registrations?
-    AccountConfirmationRequired = false
+    AccountConfirmationRequired = true
 
     ;; Variables for your mail server
     ;; Users will get email notifications from this account.
@@ -116,9 +121,11 @@
     SmtpUsername = "your_email@gmail.com"
     SmtpPassword = "secret"
 
+    HomeLocation = "My_World_1"
+
 [TOSModule]
-    ;; Not enabled by default. Enable it if you like by setting this to true
-    Enabled = false
+    ;; Enabled by default. Disable it if you like by setting this to false
+    Enabled = true
     ;; Tell the users what this is about
     Message = "Please read and agree to the Terms of Service"
     ;; Should local users be shown the TOS on first login?
@@ -129,3 +136,5 @@
     ;; You'll find it under <your diva dir>/WifiPages/tos.html
     TOS_URL = "http://127.0.0.1:9000/wifi/tos.html"
 
+[Groups]
+    HomeURI = "http://127.0.0.1:9000"

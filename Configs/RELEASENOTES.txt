@@ -1,5 +1,38 @@
 *** Release Notes ***
 
+This is diva-r22458 corresponding to OpenSim 0.7.5. This is a minor
+release that includes unlimited groups and a few configuration fixes.
+
+IF YOU UPDATING FROM RELEASES PRIOR TO r22043, PLEASE SEE THE RELEASE
+NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
+
+** Changes in OpenSim
+
+- bug fix in llHTTP Request
+- bug fix in DataSnapshot for MISearch pictures
+
+** Diva addons
+
+- Diva Groups now with unlimited capabilities
+- Required [Groups] section in MyWorld.ini with this world's
+  address, like so:
+[Groups]
+    HomeURI = "http://yourdomain:9000"
+
+** Changes in D2 configurations
+
+- Configuration fix: use SuitcaseInventory
+- Diva TOS enabled by default
+
+** Changes in Wifi
+
+- Switched AccountConfirmationRequired to true by default
+
+
+===================== Older release notes ====================
+
+==== r22043 ====
+
 This is diva-r22043 corresponding to OpenSim 0.7.5. This is a major
 release that includes several new addons. Your attention is required.
 
@@ -63,9 +96,6 @@ None
 ** Changes in Wifi
 
 - Added a tos (terms of service) page for the TOS module
-
-
-===================== Older release notes ====================
 
 ==== r20232 ====
 

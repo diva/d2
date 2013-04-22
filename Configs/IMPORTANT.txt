@@ -1,8 +1,13 @@
 ###############################################
 #	           ATTENTION                  #
 #                                             #
-#       FURTHER ACTION IS REQUIRED            #
+# If updating from r22043: make sure that you #
+# have in your MyWorld.ini:                   #
+# [Groups]                                    #
+#    HomeURI = "http://your_domain:9000"      #
 #                                             #
+#                                             #
+#     If updating from older releases         #
 #    See RELEASENOTES.txt for CRITICAL        #
 #    information about updates to your        #
 #    existing configuration.                  #
