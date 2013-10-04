@@ -274,7 +274,7 @@ namespace MetaverseInk.Configuration
                                 line = line.Replace("secret", gmailPasswd);
 
                             if (line.Contains("HomeLocation"))
-                                line = line.Replace("My_World_1", worldName.Replace(' ', '_') + "_1");
+                                line = line.Replace("My_World_1", worldName + " 1/128/128/30");
 
                             tw.WriteLine(line);
                         }
