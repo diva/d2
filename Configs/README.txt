@@ -23,9 +23,9 @@ worlds. It contains:
    as easy as possible. 
 
 4) several additional addons, such as a Web application for user
-   registrations and Groups.
+   registrations
 
-5) preconfiguration for use of MySQL DB backend, ODE
+5) preconfiguration for use of MySQL DB backend, ODE 
    physics, and a default world consisting of multiple regions
 
 6) additional content in the Library

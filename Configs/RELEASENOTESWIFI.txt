@@ -1,5 +1,18 @@
 *** Release Notes ***
 
+diva-wifi-0-7-6
+
+- New feature: ability to upload IARs from Wifi. Grid operators can
+  control who has permission to do that by setting the UserLevel in
+  people's accounts. Minimum UserLevel for this feature is
+  configurable
+
+- Added Spanish translation. Thanks Sergio Melero Raya!
+
+- Fix default appearance bug, where items were placed under lost & found
+
+--------------------------------------
+
 diva-wifi-0-7-5
 
 Added UI for managing groups under the administrator account.

@@ -13,19 +13,17 @@
 [Network]
     http_listener_port = 9000
 
+[Hypergrid]
+    HomeURI = "http://127.0.0.1:9000"
+    GatekeeperURI = "http://127.0.0.1:9000"
+
 [GridService]
     Region_My_World_1 = "DefaultRegion, FallbackRegion"
-    Gatekeeper = "http://127.0.0.1:9000"
-
-[HGInventoryService]
-    HomeURI = "http://127.0.0.1:9000"
 
 [HGAssetService]
     HomeURI = "http://127.0.0.1:9000"
 
 [HGInventoryAccessModule]
-    HomeURI = "http://127.0.0.1:9000"
-    Gatekeeper = "http://127.0.0.1:9000"
     ;; If you want to protect your assets from being copied by foreign visitors
     ;; uncomment the next line. You may want to do this on sims that have licensed content.
     ; OutboundPermission = False
@@ -33,12 +31,8 @@
 [DataSnapshot]
     gridname = "My World"
 
-[Messaging]
-    Gatekeeper = "http://127.0.0.1:9000"
-
 [LoginService]
     WelcomeMessage = "Welcome!"
-    GatekeeperURI = "http://127.0.0.1:9000"
 
     SRV_HomeURI = "http://127.0.0.1:9000"    
     SRV_InventoryServerURI = "http://127.0.0.1:9000"
@@ -46,12 +40,15 @@
     SRV_FriendsServerURI = "http://127.0.0.1:9000"
     SRV_IMServerURI = "http://127.0.0.1:9000"
     SRV_GroupsServerURI = "http://127.0.0.1:9000"
+
+    ;; commented out until next release
+    ;SRV_ProfileServerURI = "http://127.0.0.1:9000"
+
     ;; For Viewer 2
     MapTileURL = "http://127.0.0.1:9000/"
 
 
 [GatekeeperService]
-    ExternalName = "http://127.0.0.1:9000"
     AllowTeleportsToAnyRegion = false
 
     ;; HG 2.0 access control
@@ -94,9 +91,10 @@
     welcome = http://127.0.0.1:9000/wifi/welcome.html
     register = http://127.0.0.1:9000/wifi/user/account
     password = http://127.0.0.1:9000/wifi/forgotpassword
+    gatekeeper = http://127.0.0.1:9000/
+    uas = http://127.0.0.1:9000/
 
 [SimulatorFeatures]
-    MapImageServerURI = "http://127.0.0.1:9000/"
     SearchServerURI = "http://127.0.0.1:9000/"
 
 
@@ -123,6 +121,15 @@
 
     HomeLocation = "My_World_1"
 
+    ;; Who can upload IARs? Set the UserLevel of accounts in order to restrict
+    ;; this feature. Default is 0 (everyone can do it)
+    ; IARUserLevel = 0
+
+
+[EntityTransfer]
+    ;; Disable limit checks (uncomment), if you are using the latest (9/2013) viewers
+    ; max_distance = 0
+
 [TOSModule]
     ;; Enabled by default. Disable it if you like by setting this to false
     Enabled = true
@@ -136,5 +143,3 @@
     ;; You'll find it under <your diva dir>/WifiPages/tos.html
     TOS_URL = "http://127.0.0.1:9000/wifi/tos.html"
 
-[Groups]
-    HomeURI = "http://127.0.0.1:9000"

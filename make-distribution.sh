@@ -11,7 +11,7 @@ wd=`pwd`
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=22458
+tag=23797
 distdir=diva-r$tag
 
 # Create language satellite assemblies for localization
@@ -32,11 +32,8 @@ cp $opensimdir/LICENSE.txt $distdir/OSLICENSE.txt
 cp -r $opensimdir/ThirdPartyLicenses $distdir
 # Copy proprietary addons from MI
 echo Adding Metaverse Ink addons from $midir
-cp $midir/bin/Diva.Groups.dll $distdir/bin
-cp $midir/bin/Diva.MISearchModules.dll $distdir/bin
-cp $midir/bin/Diva.OfflineIM.dll $distdir/bin
 cp $midir/bin/Diva.TOS.dll $distdir/bin
-
+cp $midir/bin/Diva.MISearchModules.dll $distdir/bin
 
 # Clean up
 echo Cleaning up
@@ -94,6 +91,7 @@ cp Configs/DotNetZip.txt $distdir/ThirdPartyLicenses
 cp Configs/IMPORTANT.txt $distdir
 
 cp Configs/OpenSim.ini $distdir/bin
+cp Configs/OpenSim.exe.config $distdir/bin
 cp Configs/DivaPreferences.ini $distdir/bin/config-include
 cp Configs/MyWorld.ini.example $distdir/bin/config-include
 cp Configs/RegionConfig.ini.example $distdir/bin/Regions

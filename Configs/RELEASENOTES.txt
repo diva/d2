@@ -1,5 +1,54 @@
 *** Release Notes ***
 
+This is diva-r23797 corresponding to OpenSim 0.7.6. This is a major
+release that includes unlimited groups, drastic performance
+improvements, several important bug fixes and a few configuration changes.
+
+IF YOU UPDATING FROM RELEASES PRIOR TO r22043, PLEASE SEE THE RELEASE
+NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.7.6_Release
+Many new features and improvements!, most notably:
+
+- Hypergrid long jump limitation (aka 4096 bug) has now been lifted,
+  given that several 3rd party viewers have now fixed the bug on their
+  end
+
+- V2 Groups has now been fully integrated in core
+  OpenSim. Configurations didn't change.
+
+- Simulators should now be able to support 50+ avatars before showing
+  lag. This number is higher (80+) if avatars are removed from the
+  physics scene (e.g. sit)
+
+- Support for materials
+  (http://community.secondlife.com/t5/Featured-News/Get-the-New-Materials-Viewer-Today/ba-p/2051927) 
+
+** Diva addons
+
+- Diva Groups removed from addons, now in core OpenSim. 
+
+
+** Changes in D2 configurations
+
+None
+
+** Changes in Wifi
+
+- New feature: ability to upload IARs from Wifi. Grid operators can
+  control who has permission to do that by setting the UserLevel in
+  people's accounts. Minimum UserLevel for this feature is
+  configurable
+
+- Added Spanish translation. Thanks Sergio Melero Raya!
+
+
+===================== Older release notes ====================
+
+==== r22458 ====
+
 This is diva-r22458 corresponding to OpenSim 0.7.5. This is a minor
 release that includes unlimited groups and a few configuration fixes.
 
@@ -28,8 +77,6 @@ NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
 
 - Switched AccountConfirmationRequired to true by default
 
-
-===================== Older release notes ====================
 
 ==== r22043 ====
 
