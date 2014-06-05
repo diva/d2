@@ -1,5 +1,11 @@
 #! /usr/bin/sh
 
+if [ $# -ne 1 ]
+  then
+    echo "Usage: make-distribution.sh <tag>"
+    exit 1
+fi
+
 opensimdir=../diva-distribution
 midir=../MIServices/addons
 toolsdir=Tools
@@ -11,7 +17,7 @@ wd=`pwd`
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (86)/Git/bin/git" show-ref --tags | tail -1`
 #tag=`echo ${tag:53}`
-tag=23797
+tag=$1
 distdir=diva-r$tag
 
 # Create language satellite assemblies for localization
