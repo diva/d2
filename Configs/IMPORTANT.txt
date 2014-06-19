@@ -1,15 +1,20 @@
 ###############################################
 #	           ATTENTION                  #
 #                                             #
-# If updating from r22043: make sure that you #
-# have in your MyWorld.ini:                   #
-# [Groups]                                    #
-#    HomeURI = "http://your_domain:9000"      #
+# For profiles to work, edit MyWorld.ini and  #
+# add this section:                           #
+# [UserProfiles]                              #
+#    ProfileServiceURL = "your world's URL"   #
 #                                             #
+# Then add this extra var under               #
+# [LoginService]                              #
+#   SRV_ProfileServerURI = "your world's URL" #
 #                                             #
-#     If updating from older releases         #
-#    See RELEASENOTES.txt for CRITICAL        #
-#    information about updates to your        #
-#    existing configuration.                  #
+###               NEW NEW NEW               ###
+#     Don't miss variable-sized regions!      #
+#     See here how to update your world:      #
+#                                             #
+#    http://metaverseink.com/blog/?p=552      #
+#                                             #
 #                                             #
 ###############################################

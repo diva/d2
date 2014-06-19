@@ -46,6 +46,7 @@ echo Cleaning up
 cd $wd
 chmod +rwx $distdir -R
 rm $distdir/WifiPages/*~
+rm $distdir/WifiPages/*/*~
 cd $distdir/bin
 rm Robust* SimpleApp*
 rm OpenSim.TestSuite* Prebuild.exe* OpenSim.Tests.Clients*
@@ -56,7 +57,7 @@ rm OpenSim.Grid.*
 rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* *.Data.SQLite.dll* Castle* mssql_connection.ini
 
 # Unused Physics
-rm libbulletnet.so libbulletnet.dll Modified.XnaDevRu.BulletX.dll MonoXnaCompactMaths.dll Bullet* Physics/OpenSim.Region.Physics.Bullet* Physics/OpenSim.Region.Physics.BulletXPlugin.* Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
+rm Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
 
 # Unused plugins
 rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventory* OpenSim.ApplicationPlugins.Rest.Regions.dll*

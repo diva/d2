@@ -4,7 +4,10 @@
     ; performance on .NET/Windows
     async_call_method = SmartThreadPool
     ; recommended: false for mono / true for Windows
-    use_async_when_possible = false
+    use_async_when_possible =false
+    ; WARNING: megaregions are being replaced by varregions
+    ; so new D2 will overwrite DivaPreferences
+    CombineContiguousRegions = false
 
 [DatabaseService]
     ; ### Set the password (again)
@@ -18,7 +21,8 @@
     GatekeeperURI = "http://127.0.0.1:9000"
 
 [GridService]
-    Region_My_World_1 = "DefaultRegion, FallbackRegion"
+    Region_My_World_1 = "DefaultRegion, DefaultHGRegion, FallbackRegion"
+    Region_My_World = "DefaultRegion, DefaultHGRegion, FallbackRegion"
 
 [HGAssetService]
     HomeURI = "http://127.0.0.1:9000"
@@ -31,6 +35,9 @@
 [DataSnapshot]
     gridname = "My World"
 
+[UserProfiles]
+  ProfileServiceURL = "http://127.0.0.1:9000"
+
 [LoginService]
     WelcomeMessage = "Welcome!"
 
@@ -40,17 +47,13 @@
     SRV_FriendsServerURI = "http://127.0.0.1:9000"
     SRV_IMServerURI = "http://127.0.0.1:9000"
     SRV_GroupsServerURI = "http://127.0.0.1:9000"
-
-    ;; commented out until next release
-    ;SRV_ProfileServerURI = "http://127.0.0.1:9000"
+    SRV_ProfileServerURI = "http://127.0.0.1:9000"
 
     ;; For Viewer 2
     MapTileURL = "http://127.0.0.1:9000/"
 
 
 [GatekeeperService]
-    AllowTeleportsToAnyRegion = false
-
     ;; HG 2.0 access control
     ;; Restrictions on origin of foreign visitors.
     ;; Are foreign visitors allowed?
@@ -119,7 +122,7 @@
     SmtpUsername = "your_email@gmail.com"
     SmtpPassword = "secret"
 
-    HomeLocation = "My_World_1"
+    HomeLocation = "My_World"
 
     ;; Who can upload IARs? Set the UserLevel of accounts in order to restrict
     ;; this feature. Default is 0 (everyone can do it)
@@ -131,8 +134,8 @@
     ; max_distance = 0
 
 [TOSModule]
-    ;; Enabled by default. Disable it if you like by setting this to false
-    Enabled = true
+    ;; Disabled by default. Disable it if you like by setting this to false
+    Enabled = false
     ;; Tell the users what this is about
     Message = "Please read and agree to the Terms of Service"
     ;; Should local users be shown the TOS on first login?
@@ -143,3 +146,5 @@
     ;; You'll find it under <your diva dir>/WifiPages/tos.html
     TOS_URL = "http://127.0.0.1:9000/wifi/tos.html"
 
+[Groups]
+    GroupsExternalURI = "http://127.0.0.1:9000"

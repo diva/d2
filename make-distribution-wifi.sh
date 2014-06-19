@@ -1,5 +1,11 @@
 #! /usr/bin/sh
 
+if [ $# -ne 1 ]
+  then
+    echo "Usage: make-distribution-wifi.sh <tag>"
+    exit 1
+fi
+
 opensimdir=../diva-distribution
 #opensimdir=../../scratch/diva-wifi-fix-0-7-2/diva-distribution
 toolsdir=Tools
@@ -10,8 +16,8 @@ wd=`pwd`
 cd $opensimdir
 #tag=`C:/Program\ Files/Git/bin/git show-ref --tags | tail -1`
 #tag=`"C:/Program Files (x86)/Git/bin/git" show-ref --tags | tail -1`
-#tag=`echo ${tag:53}`
-distdir=wifi-0-7-6
+tag=$1
+distdir=wifi-$tag
 
 # Create language satellite assemblies for localization
 echo Generating language files
@@ -25,7 +31,6 @@ mkdir $distdir
 mkdir $distdir/bin
 cp $opensimdir/bin/Diva.Data.dll $distdir/bin
 cp $opensimdir/bin/Diva.Data.MySQL.dll $distdir/bin
-cp $opensimdir/bin/Diva.Data.SQLite.dll $distdir/bin
 cp $opensimdir/bin/Diva.Interfaces.dll $distdir/bin
 cp $opensimdir/bin/Diva.OpenSimServices.dll $distdir/bin
 cp $opensimdir/bin/Diva.Utils.dll $distdir/bin
@@ -34,6 +39,7 @@ cp $opensimdir/bin/Diva.Wifi.ScriptEngine.dll $distdir/bin
 cp $opensimdir/addon-modules/Wifi/Wifi.ini.example $distdir/bin
 cp -r $opensimdir/WifiPages $distdir
 rm $distdir/WifiPages/*~
+rm $distdir/WifiPages/*/*~
 
 # Copy satellite assemblies for localization
 echo Copying language resource files

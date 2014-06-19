@@ -49,11 +49,8 @@ parallel with ROBUSTDIR/bin.
 file. In other words, edit your Robust ini file and add the Wifi data
 to it. More specifically: 
 
-  a) Under the [Startup] section, add
-  Diva.Wifi.dll:WifiServerConnector 
-  to the long list of ServiceConnectors. You can add an explicit
-  port to it, like the others have, so:
-  8002/Diva.Wifi.dll:WifiServerConnector 
+  a) Under the [ServiceList] section, add
+  WifiServerConnector = "8002/Diva.Wifi.dll:WifiServerConnector"
 
   b) Copy and paste the entire [WifiService] section to your Robust
   ini file and change the values of the configuration variables to fit

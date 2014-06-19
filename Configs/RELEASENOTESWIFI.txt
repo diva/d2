@@ -1,5 +1,11 @@
 *** Release Notes ***
 
+diva-wifi-0-8-0
+
+No changes
+
+--------------------------------------
+
 diva-wifi-0-7-6
 
 - New feature: ability to upload IARs from Wifi. Grid operators can

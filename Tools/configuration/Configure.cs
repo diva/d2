@@ -247,8 +247,16 @@ namespace MetaverseInk.Configuration
                                 line = line.Replace("Your World", worldName);
                             if (line.Contains("DefaultRegion"))
                             {
-                                string defRegionName = "Region_" + worldName.Replace(' ', '_') + "_1";
-                                line = line.Replace("Region_My_World_1", defRegionName);
+                                if (line.Contains("Region_My_World_1"))
+                                {
+                                    string defRegionName = "Region_" + worldName.Replace(' ', '_') + "_1";
+                                    line = line.Replace("Region_My_World_1", defRegionName);
+                                }
+                                else // for varregions, only 1 names Region_name
+                                {
+                                    string defRegionName = "Region_" + worldName.Replace(' ', '_');
+                                    line = line.Replace("Region_My_World", defRegionName);
+                                }
                             }
                             if (line.Contains("gridname") || line.Contains("GridName"))
                                 line = line.Replace("My World", worldName);
@@ -274,7 +282,7 @@ namespace MetaverseInk.Configuration
                                 line = line.Replace("secret", gmailPasswd);
 
                             if (line.Contains("HomeLocation"))
-                                line = line.Replace("My_World_1", worldName + " 1/128/128/30");
+                                line = line.Replace("My_World", worldName + "/128/128/30");
 
                             tw.WriteLine(line);
                         }

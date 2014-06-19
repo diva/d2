@@ -1,5 +1,44 @@
 *** Release Notes ***
 
+This is diva-r24886 corresponding to OpenSim 0.8. This is a major
+release that includes many new features and important changes.
+
+IF YOU UPDATING FROM RELEASES PRIOR TO r22043, PLEASE SEE THE RELEASE
+NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
+
+** Changes in OpenSim
+
+See http://opensimulator.org/wiki/0.8_Release
+Many new features and improvements!, most notably:
+
+- Fully functioning profiles
+
+- Variable-sized regions that support large spaces without borders. See
+  http://opensimulator.org/wiki/Varregion
+  (The default size for D2 is 512x512, but it can be changed. See link above)
+
+- Bullet physics is now the default physics engine
+
+- Hypergrid teleports can now be made over 16383 regions in X or Y directions 
+ 
+** Diva addons
+
+- No changes
+
+
+** Changes in D2 configurations
+
+- No more mega-regions for new installations, but existing mega-regions are 
+  still supported
+
+** Changes in Wifi
+
+- None
+
+===================== Older release notes ====================
+
+==== r23797 ====
+
 This is diva-r23797 corresponding to OpenSim 0.7.6. This is a major
 release that includes unlimited groups, drastic performance
 improvements, several important bug fixes and a few configuration changes.
@@ -43,9 +82,6 @@ None
   configurable
 
 - Added Spanish translation. Thanks Sergio Melero Raya!
-
-
-===================== Older release notes ====================
 
 ==== r22458 ====
 
