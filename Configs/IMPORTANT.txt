@@ -1,6 +1,11 @@
 ###############################################
 #	           ATTENTION                  #
 #                                             #
+# If updating from r24886, you are all set!   #
+#                                             #
+# If updating from r23797 or prior, please    #
+# note:                                       #
+#                                             #
 # For profiles to work, edit MyWorld.ini and  #
 # add this section:                           #
 # [UserProfiles]                              #

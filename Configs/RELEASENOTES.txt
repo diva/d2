@@ -1,5 +1,33 @@
 *** Release Notes ***
 
+This is diva-r25084 corresponding to OpenSim 0.8 (post-fixes). This 
+is a minor release that includes some bug fixes.
+
+IF YOU UPDATING FROM RELEASES PRIOR TO r22043, PLEASE SEE THE RELEASE
+NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
+
+** Changes in OpenSim
+
+- Fixed bug that prevented DataSnapshot (search) from working
+
+- Fixed bug affecting attachments upon HG teleports
+
+** Diva addons
+
+- None
+
+** Changes in D2 configurations
+
+- None
+
+** Changes in Wifi
+
+- None
+
+===================== Older release notes ====================
+
+==== r24886 ====
+
 This is diva-r24886 corresponding to OpenSim 0.8. This is a major
 release that includes many new features and important changes.
 
@@ -35,7 +63,6 @@ Many new features and improvements!, most notably:
 
 - None
 
-===================== Older release notes ====================
 
 ==== r23797 ====
 
