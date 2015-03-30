@@ -52,7 +52,6 @@
     ;; For Viewer 2
     MapTileURL = "http://127.0.0.1:9000/"
 
-
 [GatekeeperService]
     ;; HG 2.0 access control
     ;; Restrictions on origin of foreign visitors.
@@ -96,10 +95,6 @@
     password = http://127.0.0.1:9000/wifi/forgotpassword
     gatekeeper = http://127.0.0.1:9000/
     uas = http://127.0.0.1:9000/
-
-[SimulatorFeatures]
-    SearchServerURI = "http://127.0.0.1:9000/"
-
 
 [WifiService]
     GridName = "My World"
