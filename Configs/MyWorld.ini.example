@@ -124,10 +124,6 @@
     ; IARUserLevel = 0
 
 
-[EntityTransfer]
-    ;; Disable limit checks (uncomment), if you are using the latest (9/2013) viewers
-    ; max_distance = 0
-
 [TOSModule]
     ;; Disabled by default. Disable it if you like by setting this to false
     Enabled = false

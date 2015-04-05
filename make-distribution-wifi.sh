@@ -21,7 +21,7 @@ distdir=wifi-$tag
 
 # Create language satellite assemblies for localization
 echo Generating language files
-cd $opensimdir/addon-modules/Wifi/Localization
+cd $opensimdir/addon-modules/21Wifi/Localization
 ./make_languages.sh
 
 # Create distribution directory and start filling it

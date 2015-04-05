@@ -1,5 +1,26 @@
 *** Release Notes ***
 
+This is diva-r25909 corresponding to OpenSim 0.8.1 (post-fixes). This 
+is a minor release containing mostly bug fixes.
+
+** Changes in OpenSim since last release
+
+For full release notes, see
+http://opensimulator.org/wiki/0.8.0.1_Release
+
+
+** Changes in D2 configurations
+
+- None
+
+** Changes in Wifi
+
+- None
+
+===================== Older release notes ====================
+
+==== r25084 ====
+
 This is diva-r25084 corresponding to OpenSim 0.8 (post-fixes). This 
 is a minor release that includes some bug fixes.
 
@@ -24,7 +45,6 @@ NOTES FOR THAT VERSION BELOW FOR IMPORTANT INFORMATION.
 
 - None
 
-===================== Older release notes ====================
 
 ==== r24886 ====
 

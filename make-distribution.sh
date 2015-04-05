@@ -22,7 +22,7 @@ distdir=diva-r$tag
 
 # Create language satellite assemblies for localization
 echo Generating language files
-cd $opensimdir/addon-modules/Wifi/Localization
+cd $opensimdir/addon-modules/21Wifi/Localization
 ./make_languages.sh
 
 # Create distribution directory and start filling it
@@ -31,7 +31,8 @@ echo Making Diva Distribution $distdir from $opensimdir
 mkdir $distdir
 mkdir $distdir/doc
 cp -r $opensimdir/bin $distdir
-cp -r $opensimdir/WifiPages $distdir
+#cp -r $opensimdir/WifiPages $distdir
+cp $opensimdir/bin/Wifi.ini $distdir/bin
 cp $opensimdir/README.txt $distdir/OSREADME.txt
 cp $opensimdir/CONTRIBUTORS.txt $distdir/OSCONTRIBUTORS.txt
 cp $opensimdir/LICENSE.txt $distdir/OSLICENSE.txt
@@ -39,7 +40,9 @@ cp -r $opensimdir/ThirdPartyLicenses $distdir
 # Copy proprietary addons from MI
 echo Adding Metaverse Ink addons from $midir
 cp $midir/bin/Diva.TOS.dll $distdir/bin
+cp $midir/bin/DivaTOS.ini $distdir/bin
 cp $midir/bin/Diva.MISearchModules.dll $distdir/bin
+cp $midir/bin/MISearch.ini $distdir/bin
 
 # Clean up
 echo Cleaning up
@@ -61,6 +64,8 @@ rm Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* P
 
 # Unused plugins
 rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventory* OpenSim.ApplicationPlugins.Rest.Regions.dll*
+
+rm *AddinExample.*
 
 # Unused script engines
 # Unfortunately there's some dependency...
