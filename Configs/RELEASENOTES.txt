@@ -1,5 +1,26 @@
 *** Release Notes ***
 
+This is diva-r25950 corresponding to OpenSim 0.8.1 (post-fixes). This 
+is a very minor release containing one major bug fix on HG asset transfers.
+
+** Changes in OpenSim since last release
+
+- fixed a regression bug introduced back in October, where the 
+  prefix and name space were being added twice on HG asset posts 
+  by simulators.
+
+** Changes in D2 configurations
+
+- None
+
+** Changes in Wifi
+
+- None
+
+===================== Older release notes ====================
+
+==== r25909 ====
+
 This is diva-r25909 corresponding to OpenSim 0.8.1 (post-fixes). This 
 is a minor release containing mostly bug fixes.
 
@@ -16,8 +37,6 @@ http://opensimulator.org/wiki/0.8.0.1_Release
 ** Changes in Wifi
 
 - None
-
-===================== Older release notes ====================
 
 ==== r25084 ====
 

@@ -1,7 +1,8 @@
 ###############################################
 #	           ATTENTION                  #
 #                                             #
-# If updating from r24886, you are all set!   #
+# If updating from r24886 or 25909,           #
+# you are all set!                            #
 #                                             #
 # If updating from r23797 or prior, please    #
 # note:                                       #
