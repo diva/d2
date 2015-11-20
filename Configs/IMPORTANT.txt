@@ -1,22 +1,10 @@
 ###############################################
 #	           ATTENTION                  #
 #                                             #
-# If updating from r24886 or 25909,           #
-# you are all set!                            #
 #                                             #
-# If updating from r23797 or prior, please    #
-# note:                                       #
-#                                             #
-# For profiles to work, edit MyWorld.ini and  #
-# add this section:                           #
-# [UserProfiles]                              #
-#    ProfileServiceURL = "your world's URL"   #
-#                                             #
-# Then add this extra var under               #
-# [LoginService]                              #
-#   SRV_ProfileServerURI = "your world's URL" #
-#                                             #
-###               NEW NEW NEW               ###
+###                                         ###
+#   MEGA-REGIONS HAVE BEEN MARKED DEPRECATED  #
+# AND WILL BE DISCONTINUED IN THE NEXT RELEASE#
 #     Don't miss variable-sized regions!      #
 #     See here how to update your world:      #
 #                                             #

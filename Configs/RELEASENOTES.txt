@@ -1,5 +1,37 @@
 *** Release Notes ***
 
+This is diva-r08200 corresponding to OpenSim 0.8.2.0. This 
+is a major release of OpenSim.
+
+** Changes in OpenSim since last release
+
+- See http://opensimulator.org/wiki/0.8.2.0_Release
+
+IMPORTANT
+
+- Please issue this command in your DB:
+  update os_groups_roles set Powers ='351843720888318' where Powers='349644697632766'
+
+** Changes in D2 configurations
+
+- None
+
+** Changes in Wifi
+
+- added an option to ignore certificate verification. 
+  BypassCertificateVerification = true | false, false by default
+
+- added Portuguese-Brazilian translation (thanks Melanie)
+
+- Now the server-side can impose a front end language without relying on the users' browser settings.
+  See FrontendLanguage in ini
+
+- UserDocsPath is now configurable
+
+===================== Older release notes ====================
+
+==== r25950 ====
+
 This is diva-r25950 corresponding to OpenSim 0.8.1 (post-fixes). This 
 is a very minor release containing one major bug fix on HG asset transfers.
 
@@ -17,7 +49,6 @@ is a very minor release containing one major bug fix on HG asset transfers.
 
 - None
 
-===================== Older release notes ====================
 
 ==== r25909 ====
 
