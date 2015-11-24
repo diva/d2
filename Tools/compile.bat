@@ -1,1 +1,1 @@
-C:\WINDOWS\Microsoft.NET\Framework\v3.5\msbuild OpenSim.sln 
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\\msbuild opensim.sln 

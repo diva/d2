@@ -35,6 +35,7 @@ namespace MetaverseInk.Configuration
 
         public static void Main(string[] args)
         {
+            Console.WriteLine(Environment.Version);
             GetUserInput();
             ConfigureRegions();
             ConfigureMyWorld();

@@ -32,7 +32,7 @@
       </Options>
     </Configuration>
 
-    <Project frameworkVersion="v3_5" name="Configure" path="configuration" type="Exe">
+    <Project frameworkVersion="v4_0" name="Configure" path="configuration" type="Exe">
       <Configuration name="Debug">
         <Options>
           <OutputPath>../bin/</OutputPath>
@@ -55,7 +55,7 @@
       </Files>
     </Project>
 
-    <Project frameworkVersion="v3_5" name="Update" path="update" type="Exe">
+    <Project frameworkVersion="v4_0" name="Update" path="update" type="Exe">
       <Configuration name="Debug">
         <Options>
           <OutputPath>../bin/</OutputPath>
