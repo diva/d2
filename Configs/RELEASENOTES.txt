@@ -1,5 +1,18 @@
 *** Release Notes ***
 
+This is diva-r08210 corresponding to OpenSim 0.8.2.1. This 
+is a major release of OpenSim.
+
+** Changes in OpenSim since last release
+
+- See http://opensimulator.org/wiki/0.8.2.1_Release
+
+If you are upgrading from 0.8.1.* please see release notes below for r08200
+
+===================== Older release notes ====================
+
+==== r08200 ====
+
 This is diva-r08200 corresponding to OpenSim 0.8.2.0. This 
 is a major release of OpenSim.
 
@@ -27,8 +40,6 @@ IMPORTANT
   See FrontendLanguage in ini
 
 - UserDocsPath is now configurable
-
-===================== Older release notes ====================
 
 ==== r25950 ====
 
