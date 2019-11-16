@@ -1,10 +1,9 @@
 ###############################################
-#	           ATTENTION                  #
+#	           ATTENTION                      #
 #                                             #
 #                                             #
 ###                                         ###
-#   MEGA-REGIONS HAVE BEEN MARKED DEPRECATED  #
-# AND WILL BE DISCONTINUED IN THE NEXT RELEASE#
+#    MEGA-REGIONS HAVE BEEN DISCONTINUED      #
 #     Don't miss variable-sized regions!      #
 #     See here how to update your world:      #
 #                                             #

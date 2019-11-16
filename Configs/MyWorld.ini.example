@@ -4,10 +4,7 @@
     ; performance on .NET/Windows
     async_call_method = SmartThreadPool
     ; recommended: false for mono / true for Windows
-    use_async_when_possible =false
-    ; WARNING: megaregions are being replaced by varregions
-    ; so new D2 will overwrite DivaPreferences
-    CombineContiguousRegions = false
+    use_async_when_possible = false
 
 [DatabaseService]
     ; ### Set the password (again)
