@@ -1,5 +1,11 @@
 *** Release Notes ***
 
+diva-wifi-09100
+
+No changes in Wifi.
+
+--------------------------------------
+
 diva-wifi-09000
 
 No changes

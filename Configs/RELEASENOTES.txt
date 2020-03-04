@@ -1,5 +1,26 @@
 *** Release Notes ***
 
+This is diva-r09100 corresponding to OpenSim 0.9.1.0. This 
+is a major release of OpenSim.
+
+** Changes in OpenSim since last release
+
+- See http://opensimulator.org/wiki/0.9.1.0_Release
+
+If you are upgrading from 0.8.1.* please see release notes below for r08200
+
+** Changes in D2 configurations
+
+- None
+
+** Changes in Wifi
+
+- None
+
+===================== Older release notes ====================
+
+==== r00900 ====
+
 This is diva-r09000 corresponding to OpenSim 0.9.0.0. This 
 is a major release of OpenSim.
 
@@ -16,8 +37,6 @@ If you are upgrading from 0.8.1.* please see release notes below for r08200
 ** Changes in Wifi
 
 - None
-
-===================== Older release notes ====================
 
 ==== r08210 ====
 
