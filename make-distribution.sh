@@ -7,7 +7,7 @@ if [ $# -ne 1 ]
 fi
 
 opensimdir=../diva-distribution
-midir=../MIServices/addons
+midir=../MIAddons
 toolsdir=Tools
 libdir=Library
 wd=`pwd`
@@ -60,7 +60,7 @@ rm OpenSim.Grid.*
 rm libdb_dotNET43.dll libdb44d.dll System.Data.SQLite.dll OpenSim.Data.SQLiteLegacy.dll OpenSim.Data.MSSQL.dll* *.Data.SQLite.dll* Castle* mssql_connection.ini
 
 # Unused Physics
-rm Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS*
+rm Physics/OpenSim.Region.Physics.Basic* Physics/OpenSim.Region.Physics.PhysX* Physics/OpenSim.Region.Physics.POS* Physics/OpenSim.Region.Physics.ODE*
 
 # Unused plugins
 rm OpenSim.ApplicationPlugins.Rest.dll* OpenSim.ApplicationPlugins.Rest.Inventory* OpenSim.ApplicationPlugins.Rest.Regions.dll*

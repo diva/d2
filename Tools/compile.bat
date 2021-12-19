@@ -1,1 +1,1 @@
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\\msbuild opensim.sln 
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild" opensim.sln 
